@@ -259,6 +259,16 @@
             padding: var(--section-padding);
         }
         
+        .publications-container {
+            max-height: 400px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .publications-expanded {
+            max-height: 5000px;
+        }
+        
         .publication-item {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
@@ -285,6 +295,24 @@
         .publication-date {
             font-size: 0.9rem;
             color: #6c757d;
+        }
+        
+        .toggle-publications {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .toggle-publications:hover {
+            background-color: var(--accent-color);
         }
         
         /* Projects Section */
@@ -573,37 +601,125 @@
     <!-- Publications Section -->
     <section class="publications">
         <div class="container">
-            <h2 class="section-title">Selected Publications</h2>
+            <h2 class="section-title">Publications</h2>
             
-            <div class="publication-item">
-                <h3 class="publication-title">Context-Aware Optimal Resource Management in Electric Vehicle Smart2Charge</h3>
-                <div class="publication-details">Doctoral Thesis, Birmingham City University</div>
-                <div class="publication-date">January 2025</div>
+            <div class="publications-container" id="publicationsContainer">
+                <div class="publication-item">
+                    <h3 class="publication-title">Context-Aware Optimal Resource Management in Electric Vehicle Smart2Charge</h3>
+                    <div class="publication-details">Doctoral Thesis, Birmingham City University. https://www.open-access.bcu.ac.uk/id/eprint/16096</div>
+                    <div class="publication-date">January 2025</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Reinforcement Learning-Based Optimization of eBike Charging Infrastructure</h3>
+                    <div class="publication-details">The 11th IEEE/ACM International Conference on Big Data Computing, Applications and Technologies (BDCAT2024), Sharjah, UAE</div>
+                    <div class="publication-date">November 2024</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Smart EV Charging with Context-Awareness: Enhancing Resource Utilization via Deep Reinforcement Learning</h3>
+                    <div class="publication-details">IEEE Access, Vol. 12, pp. 7009-7027, 2024, DOI: 10.1109/ACCESS.2024.3351360</div>
+                    <div class="publication-date">February 2024</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">KNIGHT: Machine Learning Methods to Enhance Individualized Learning</h3>
+                    <div class="publication-details">5th Int. Conference on AI in Education Technology (AIET), Barcelona, Spain</div>
+                    <div class="publication-date">June 2024</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Multi-Modal LA in Personalized Education using Deep Reinforcement Learning Based Approach</h3>
+                    <div class="publication-details">IEEE Access, Vol. 12, S. 54049-54065</div>
+                    <div class="publication-date">May 2024</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Context Aware-Resource Optimality in Electric Vehicle Smart2Charge Application: A Deep Reinforcement Learning-Based Approach</h3>
+                    <div class="publication-details">IEEE Access</div>
+                    <div class="publication-date">January 2023</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">IMobilakou: The Role of Machine Listening to Detect Vehicle using Sound Acoustics</h3>
+                    <div class="publication-details">The 5th International Conference on Advances in Artificial Intelligence (ICAAI 2021)</div>
+                    <div class="publication-date">January 2021</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">ARaaS: Context Aware Optimal Charging Distribution using Deep Reinforcement Learning</h3>
+                    <div class="publication-details">ICITY_2021: Towards Liveable, Intelligent and Sustainable Future Cities</div>
+                    <div class="publication-date">January 2021</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">COaaS: Continuous Integration and Delivery Framework for HPC using Gitlab-Runner</h3>
+                    <div class="publication-details">Proceedings of the 2020 The 4th International Conference on Big Data and Internet of Things (BDIOT 2020)</div>
+                    <div class="publication-date">January 2020</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Context-Aware Optimal Charging Distribution using Deep Reinforcement Learning</h3>
+                    <div class="publication-details">Proceedings of the 2020 The 4th International Conference on Big Data and Internet of Things (BDIOT 2020)</div>
+                    <div class="publication-date">January 2020</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Distributed Uniform Streaming Framework: An Elastic Fog Computing Platform for Event Stream Processing and Platform Transparency</h3>
+                    <div class="publication-details">Future Internet 2019</div>
+                    <div class="publication-date">January 2019</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Demonstrating Innovative Technologies for the Flemish Asphalt Sector in the CYPATS Project</h3>
+                    <div class="publication-details">IOP Conf. Ser.: Mater. Sci. Eng. 471 022031</div>
+                    <div class="publication-date">January 2019</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Context-Aware Distribution in Constrained IoT Environments</h3>
+                    <div class="publication-details">Advances on P2P, Parallel, Grid, Cloud and Internet Computing</div>
+                    <div class="publication-date">January 2018</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Distributed Uniform Streaming Framework: Towards an Elastic Fog Computing Platform for Event Stream Processing</h3>
+                    <div class="publication-details">Advances on P2P, Parallel, Grid, Cloud and Internet Computing</div>
+                    <div class="publication-date">January 2018</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">A Particle Swarm Optimization-Based Heuristic for Optimal Cost Estimation in Internet of Things Environment</h3>
+                    <div class="publication-details">Proceedings of the 2018 2nd International Conference on Big Data and Internet of Things (BDIOT 2018)</div>
+                    <div class="publication-date">January 2018</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Recommendations for the Development of Production, Transport and Paving Data Storage in the Flemish Region</h3>
+                    <div class="publication-details">Proceedings of the 2018 2nd International Conference on Big Data and Internet of Things (BDIOT 2018)</div>
+                    <div class="publication-date">January 2018</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Towards Real-Time Smart Road Construction: An Efficient Process Management Through the Implementation of Internet of Things</h3>
+                    <div class="publication-details">International Conference on Big Data and Internet of Thing (BDIOT2017)</div>
+                    <div class="publication-date">January 2017</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Context-Aware Optimization of Distributed Resources in Internet of Things Using Key Performance Indicators</h3>
+                    <div class="publication-details">Advances on P2P, Parallel, Grid, Cloud and Internet Computing</div>
+                    <div class="publication-date">January 2017</div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">On Fast Recognition of Isolated Characters by Constructing Character Signature Database</h3>
+                    <div class="publication-details">2006 International Conference on Emerging Technologies</div>
+                    <div class="publication-date">January 2006</div>
+                </div>
             </div>
             
-            <div class="publication-item">
-                <h3 class="publication-title">Reinforcement Learning-Based Optimization of eBike Charging Infrastructure</h3>
-                <div class="publication-details">The 11th IEEE/ACM International Conference on Big Data Computing, Applications and Technologies (BDCAT2024), Sharjah, UAE</div>
-                <div class="publication-date">November 2024</div>
-            </div>
-            
-            <div class="publication-item">
-                <h3 class="publication-title">Smart EV Charging with Context-Awareness: Enhancing Resource Utilization via Deep Reinforcement Learning</h3>
-                <div class="publication-details">IEEE Access, Vol. 12, pp. 7009-7027, 2024, DOI: 10.1109/ACCESS.2024.3351360</div>
-                <div class="publication-date">February 2024</div>
-            </div>
-            
-            <div class="publication-item">
-                <h3 class="publication-title">KNIGHT: Machine Learning Methods to Enhance Individualized Learning</h3>
-                <div class="publication-details">5th Int. Conference on AI in Education Technology (AIET), Barcelona, Spain</div>
-                <div class="publication-date">June 2024</div>
-            </div>
-            
-            <div class="publication-item">
-                <h3 class="publication-title">Multi-Modal LA in Personalized Education using Deep Reinforcement Learning Based Approach</h3>
-                <div class="publication-details">IEEE Access, Vol. 12, S. 54049-54065</div>
-                <div class="publication-date">May 2024</div>
-            </div>
+            <button class="toggle-publications" id="togglePublications">Show More Publications</button>
         </div>
     </section>
 
@@ -657,28 +773,3 @@
                     <span>Urdu</span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/muddsairsharif/" class="social-link" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="mailto:muddsairsharif@gmail.com" class="social-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://github.com/muddsairsharif" class="social-link" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2025 Muddsair Sharif. All rights reserved.
-            </div>
-        </div>
-    </footer>
-</body>
-</html>

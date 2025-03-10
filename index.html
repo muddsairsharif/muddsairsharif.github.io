@@ -322,6 +322,16 @@
         
         .project-item {
             margin-bottom: 2rem;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .project-title {
@@ -329,6 +339,22 @@
             font-weight: 600;
             margin-bottom: 0.5rem;
             color: var(--secondary-color);
+        }
+        
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background-color: var(--accent-color);
+            color: white;
         }
         
         /* Languages Section */
@@ -730,22 +756,26 @@
             
             <div class="project-item">
                 <h3 class="project-title">KNIGHT LA Framework</h3>
-                <p>An innovative framework leveraging multi-modal learning data to revolutionize personalized education through AI and Machine Learning.</p>
+                <p>An innovative framework leveraging multi-modal learning data to revolutionize personalized education through AI and Machine Learning. The framework integrates learning analytics with adaptive systems to create customized educational pathways.</p>
+                <a href="projects/knight-framework.html" class="project-link">View Project Details</a>
             </div>
             
             <div class="project-item">
                 <h3 class="project-title">ARaaS (Adaptive Resource as a Service)</h3>
-                <p>A service delivering context-aware optimal charging distribution, powered by Deep Reinforcement Learning.</p>
+                <p>A service delivering context-aware optimal charging distribution, powered by Deep Reinforcement Learning. This solution optimizes resource allocation based on contextual factors and real-time metrics.</p>
+                <a href="projects/araas.html" class="project-link">View Project Details</a>
             </div>
             
             <div class="project-item">
                 <h3 class="project-title">COaaS (Continuous Operations as a Service)</h3>
-                <p>A robust Continuous Integration and Delivery framework tailored for High Performance Computing, leveraging Gitlab-Runner.</p>
+                <p>A robust Continuous Integration and Delivery framework tailored for High Performance Computing, leveraging Gitlab-Runner. The framework enables seamless deployment pipelines in computational intensive environments.</p>
+                <a href="projects/coaas.html" class="project-link">View Project Details</a>
             </div>
             
             <div class="project-item">
                 <h3 class="project-title">Smart Road - Tetra Project</h3>
-                <p>Project focused on the Interoperability of Heterogeneous IoT Frameworks (MaaP) for smart road construction and monitoring.</p>
+                <p>Project focused on the Interoperability of Heterogeneous IoT Frameworks (MaaP) for smart road construction and monitoring. This initiative developed novel approaches to integrate diverse IoT ecosystems in infrastructure projects.</p>
+                <a href="projects/smart-road.html" class="project-link">View Project Details</a>
             </div>
         </div>
     </section>

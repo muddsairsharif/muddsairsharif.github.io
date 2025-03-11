@@ -744,8 +744,19 @@
                     <div class="publication-date">January 2006</div>
                 </div>
             </div>
+            <!-- Button with inline JavaScript for maximum reliability -->
+            <button class="toggle-publications" onclick="
+                var morePublications = document.getElementById('morePublications');
+                if (morePublications.style.display === 'none') {
+                    morePublications.style.display = 'block';
+                    this.textContent = 'Show Fewer Publications';
+                } else {
+                    morePublications.style.display = 'none';
+                    this.textContent = 'Show More Publications';
+                }
+            ">Show More Publications</button>
             
-            <button class="toggle-publications" id="togglePublications">Show More Publications</button>
+            <!--  <button class="toggle-publications" id="togglePublications">Show More Publications</button> -->
         </div>
     </section>
 

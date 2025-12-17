@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muddsair Sharif - CV</title>
+    <title>Mudd Sair Sharif - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -13,1696 +13,658 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-            transition: background 0.3s ease;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
         }
 
-        body.dark-mode {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-switcher button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .language-switcher button.active {
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .language-switcher button:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        nav {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            animation: slideIn 0.6s ease;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        body.dark-mode .container {
-            background: #2d2d44;
-            color: #e0e0e0;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-        }
-
-        .header-content {
-            animation: fadeInDown 0.8s ease;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.95;
-            margin-bottom: 5px;
-        }
-
-        .header-contact {
-            margin-top: 15px;
-            font-size: 0.95em;
-            opacity: 0.9;
-        }
-
-        .header-contact a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: opacity 0.3s ease;
-        }
-
-        .header-contact a:hover {
-            opacity: 0.7;
-        }
-
-        .controls {
+        nav ul {
+            list-style: none;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
             flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 1rem;
         }
 
-        .language-switcher {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid white;
-            color: white;
+        nav button {
+            background: none;
+            border: none;
             padding: 10px 20px;
-            border-radius: 25px;
+            font-size: 1rem;
             cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .language-switcher:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
-        }
-
-        .language-btn {
-            background: transparent;
-            border: none;
-            color: white;
-            cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .language-btn.active {
-            background: white;
             color: #667eea;
-        }
-
-        .language-btn:hover:not(.active) {
-            opacity: 0.8;
-        }
-
-        .nav-tabs {
-            display: flex;
-            background: #f5f5f5;
-            border-bottom: 3px solid #667eea;
-            overflow-x: auto;
-            gap: 0;
-            padding: 0;
-        }
-
-        body.dark-mode .nav-tabs {
-            background: #1a1a2e;
-            border-bottom-color: #667eea;
-        }
-
-        .nav-tab {
-            padding: 18px 25px;
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            font-size: 1em;
-            font-weight: 600;
-            color: #666;
             transition: all 0.3s ease;
             border-bottom: 3px solid transparent;
-            white-space: nowrap;
-            position: relative;
+            font-weight: 500;
         }
 
-        body.dark-mode .nav-tab {
-            color: #aaa;
-        }
-
-        .nav-tab:hover {
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-        }
-
-        .nav-tab.active {
-            color: #667eea;
-            border-bottom-color: #667eea;
-            background: rgba(102, 126, 234, 0.05);
-        }
-
-        body.dark-mode .nav-tab.active {
-            color: #667eea;
-        }
-
-        .content {
-            padding: 40px 30px;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        nav button:hover,
+        nav button.active {
+            color: #764ba2;
+            border-bottom-color: #764ba2;
         }
 
         .tab-content {
             display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .tab-content.active {
             display: block;
         }
 
-        .section-title {
-            font-size: 2em;
+        .lang-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .lang-section.hidden {
+            display: none;
+        }
+
+        .lang-section h3 {
             color: #667eea;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #667eea;
-            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            opacity: 0.7;
         }
 
-        body.dark-mode .section-title {
-            color: #7c96ff;
+        h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
         }
 
-        .entry {
-            margin-bottom: 35px;
-            padding: 20px;
-            border-left: 5px solid #667eea;
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .project-item {
             background: #f9f9f9;
-            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
             transition: all 0.3s ease;
         }
 
-        body.dark-mode .entry {
-            background: #1a1a2e;
-            border-left-color: #667eea;
-        }
-
-        .entry:hover {
-            transform: translateX(10px);
+        .project-item:hover {
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateX(5px);
         }
 
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-        }
-
-        .entry-title {
-            font-size: 1.4em;
-            color: #333;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        body.dark-mode .entry-title {
-            color: #e0e0e0;
-        }
-
-        .entry-subtitle {
-            font-size: 1.1em;
+        .project-item h4 {
             color: #667eea;
-            font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
         }
 
-        body.dark-mode .entry-subtitle {
-            color: #7c96ff;
-        }
-
-        .entry-date {
-            font-size: 0.95em;
-            color: #999;
-            font-style: italic;
-            white-space: nowrap;
-        }
-
-        body.dark-mode .entry-date {
-            color: #777;
-        }
-
-        .entry-location {
-            font-size: 0.95em;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        body.dark-mode .entry-location {
-            color: #aaa;
-        }
-
-        .entry-content {
-            color: #555;
-            line-height: 1.7;
-            margin-top: 12px;
-        }
-
-        body.dark-mode .entry-content {
-            color: #ccc;
-        }
-
-        .entry-list {
-            list-style: none;
-            margin-top: 12px;
-            margin-left: 0;
-        }
-
-        .entry-list li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-            color: #555;
-        }
-
-        body.dark-mode .entry-list li {
-            color: #ccc;
-        }
-
-        .entry-list li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .tag {
+        .project-link {
             display: inline-block;
+            margin-top: 0.5rem;
+            padding: 8px 15px;
             background: #667eea;
             color: white;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
-        .tag:hover {
+        .project-link:hover {
             background: #764ba2;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
 
-        .publication-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border-left: 5px solid #667eea;
-        }
-
-        body.dark-mode .publication-item {
-            background: #1a1a2e;
-        }
-
-        .publication-title {
-            font-size: 1.2em;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        body.dark-mode .publication-title {
-            color: #e0e0e0;
-        }
-
-        .publication-authors {
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        body.dark-mode .publication-authors {
-            color: #7c96ff;
-        }
-
-        .publication-venue {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 8px;
-        }
-
-        body.dark-mode .publication-venue {
-            color: #aaa;
-        }
-
-        .publication-year {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-weight: 600;
-        }
-
-        .grid-2 {
+        .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .card {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 10px;
-            border-top: 5px solid #667eea;
-            transition: all 0.3s ease;
-        }
-
-        body.dark-mode .card {
-            background: #1a1a2e;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
-
-        .card-title {
-            font-size: 1.3em;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        body.dark-mode .card-title {
-            color: #e0e0e0;
-        }
-
-        .card-content {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        body.dark-mode .card-content {
-            color: #aaa;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
 
         .skill-category {
             background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 5px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border-left: 4px solid #764ba2;
         }
 
-        body.dark-mode .skill-category {
-            background: #1a1a2e;
+        .skill-category h4 {
+            color: #764ba2;
+            margin-bottom: 0.5rem;
         }
 
-        .skill-category-title {
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 12px;
-            font-size: 1.1em;
+        .skill-category ul {
+            list-style: none;
         }
 
-        body.dark-mode .skill-category-title {
-            color: #7c96ff;
-        }
-
-        .skill-item {
+        .skill-category li {
+            padding: 0.3rem 0;
             color: #666;
-            padding: 6px 0;
-            line-height: 1.6;
         }
 
-        body.dark-mode .skill-item {
-            color: #aaa;
+        .skill-category li:before {
+            content: "▸ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .header {
-                padding: 25px 15px;
-            }
-
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            .header-contact a {
-                margin: 0 8px;
-                font-size: 0.9em;
-            }
-
-            .content {
-                padding: 20px 15px;
-            }
-
-            .nav-tabs {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .nav-tab {
-                padding: 15px 15px;
-                font-size: 0.9em;
-            }
-
-            .entry-header {
+            .header-content {
                 flex-direction: column;
+                text-align: center;
             }
 
-            .section-title {
-                font-size: 1.5em;
+            .header-content h1 {
+                font-size: 1.8rem;
             }
 
-            .grid-2 {
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            nav button {
+                width: 100%;
+                text-align: center;
+                border-bottom: none;
+                border-right: 3px solid transparent;
+            }
+
+            nav button.active {
+                border-right-color: #764ba2;
+                border-bottom: none;
+            }
+
+            .skills-container {
                 grid-template-columns: 1fr;
             }
 
-            .controls {
-                flex-direction: column;
-                align-items: center;
+            .language-switcher {
+                margin-top: 1rem;
+                justify-content: center;
             }
-        }
-
-        .footer {
-            background: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        body.dark-mode .footer {
-            background: #1a1a2e;
-            border-top-color: #444;
-            color: #aaa;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.7);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            50% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-        }
-
-        .lang-en.hidden,
-        .lang-de.hidden {
-            display: none;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Mudd Sair Sharif</h1>
+                <p id="headerTitle">Softwareentwickler & Webdesigner</p>
+            </div>
+            <div class="language-switcher">
+                <button onclick="switchLanguage('de')" id="btn-de" class="active">Deutsch</button>
+                <button onclick="switchLanguage('en')" id="btn-en">English</button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button class="tab-btn active" onclick="switchTab('cover-letter')"><span class="de">Anschreiben</span><span class="en hidden">Cover Letter</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('about')"><span class="de">Über mich</span><span class="en hidden">About Me</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('projects')"><span class="de">Projekte</span><span class="en hidden">Projects</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('skills')"><span class="de">Fähigkeiten</span><span class="en hidden">Skills</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('contact')"><span class="de">Kontakt</span><span class="en hidden">Contact</span></button></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <div class="header">
-            <div class="header-content">
-                <h1 lang="en" class="lang-en">Muddsair Sharif</h1>
-                <h1 lang="de" class="lang-de hidden">Muddsair Sharif</h1>
-                <p lang="en" class="lang-en">Data Analytics | AI | Digital Transformation | ML</p>
-                <p lang="de" class="lang-de hidden">Datenanalyse | KI | Digitale Transformation | ML</p>
-                <div class="header-contact">
-                    <a href="mailto:muddsairsharif@gmail.com">📧 muddsairsharif@gmail.com</a>
-                    <span style="margin: 0 10px;">📱 +49 15901615604</span>
-                    <span style="margin: 0 10px;">📍 Stuttgart, Germany</span>
+        <!-- Cover Letter Tab -->
+        <div id="cover-letter" class="tab-content active">
+            <div class="lang-section de">
+                <h2>Anschreiben</h2>
+                <p>Sehr geehrte Damen und Herren,</p>
+                <p>
+                    ich bin Mudd Sair Sharif, ein erfahrener Softwareentwickler und Webdesigner mit Leidenschaft für innovative Technologien 
+                    und benutzerfreundliche Designs. Mit meiner umfassenden Erfahrung in der Softwareentwicklung und Webdesign strebe ich danach, 
+                    zukunftsweisende Lösungen zu schaffen, die technische Exzellenz mit erstklassiger Benutzerfreundlichkeit verbinden.
+                </p>
+                <p>
+                    In meiner Karriere habe ich erfolgreiche Projekte von der Konzeption bis zur Implementierung und Wartung geleitet. 
+                    Meine Stärken liegen in der Lösung komplexer Probleme, der Zusammenarbeit mit interdisziplinären Teams und der kontinuierlichen 
+                    Optimierung von Systemen für maximale Effizienz und Skalierbarkeit.
+                </p>
+                <p>
+                    Ich freue mich auf die Gelegenheit, meine Fähigkeiten und Erfahrungen in einem dynamischen Umfeld einzubringen und 
+                    zum Erfolg eines Unternehmens beizutragen. Gerne stelle ich Ihnen in einem persönlichen Gespräch meine Kompetenzen vor 
+                    und erläutere, wie ich Ihrem Team einen wertvollen Mehrwert bieten kann.
+                </p>
+                <p>Mit freundlichen Grüßen,<br>Mudd Sair Sharif</p>
+            </div>
+
+            <div class="lang-section en hidden">
+                <h2>Cover Letter</h2>
+                <p>Dear Hiring Manager,</p>
+                <p>
+                    I am Mudd Sair Sharif, an experienced Software Developer and Web Designer with a passion for innovative technologies 
+                    and user-friendly designs. With my extensive experience in software development and web design, I strive to create 
+                    cutting-edge solutions that combine technical excellence with outstanding user experience.
+                </p>
+                <p>
+                    Throughout my career, I have successfully led projects from conception through implementation and maintenance. 
+                    My strengths lie in solving complex problems, collaborating with interdisciplinary teams, and continuously optimizing 
+                    systems for maximum efficiency and scalability.
+                </p>
+                <p>
+                    I look forward to the opportunity to bring my skills and expertise to a dynamic environment and contribute to the 
+                    success of your organization. I would be happy to discuss my competencies in a personal conversation and demonstrate 
+                    how I can provide valuable assets to your team.
+                </p>
+                <p>Sincerely,<br>Mudd Sair Sharif</p>
+            </div>
+        </div>
+
+        <!-- About Me Tab -->
+        <div id="about" class="tab-content">
+            <div class="lang-section de">
+                <h2>Über mich</h2>
+                <p>
+                    Hallo! Ich bin Mudd Sair Sharif, ein leidenschaftlicher Softwareentwickler und Webdesigner mit mehreren Jahren Erfahrung 
+                    in der Entwicklung innovativer digitaler Lösungen. Meine Expertise umfasst Full-Stack-Webentwicklung, mobile Anwendungen 
+                    und Datenbankdesign.
+                </p>
+                <h3>Beruflicher Hintergrund</h3>
+                <p>
+                    Mit meinem tiefgreifenden Verständnis von modernen Webstandards und Best Practices in der Softwareentwicklung, 
+                    habe ich erfolgreich eine Vielzahl von Projekten realisiert. Mein Ansatz kombiniert technische Kompetenz mit 
+                    kreativem Design-Thinking, um Lösungen zu schaffen, die nicht nur funktional sondern auch ästhetisch ansprechend sind.
+                </p>
+                <h3>Meine Leidenschaft</h3>
+                <p>
+                    Ich bin fasziniert von der Möglichkeit, durch Code und Design positive Veränderungen zu bewirken. 
+                    Kontinuierliches Lernen und Verbesserung sind zentral für meinen beruflichen Werdegang.
+                </p>
+            </div>
+
+            <div class="lang-section en hidden">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I'm Mudd Sair Sharif, a passionate Software Developer and Web Designer with several years of experience 
+                    creating innovative digital solutions. My expertise spans full-stack web development, mobile applications, 
+                    and database design.
+                </p>
+                <h3>Professional Background</h3>
+                <p>
+                    With my deep understanding of modern web standards and best practices in software development, 
+                    I have successfully delivered a wide range of projects. My approach combines technical competence with 
+                    creative design thinking to create solutions that are not only functional but also visually appealing.
+                </p>
+                <h3>My Passion</h3>
+                <p>
+                    I'm fascinated by the ability to create positive change through code and design. 
+                    Continuous learning and improvement are central to my professional journey.
+                </p>
+            </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <div class="lang-section de">
+                <h2>Meine Projekte</h2>
+                
+                <div class="project-item">
+                    <h4>Portfolio-Website</h4>
+                    <p>Eine reaktive und mehrsprachige Portfolio-Website mit modernem Design. Gebaut mit HTML5, CSS3 und JavaScript.</p>
+                    <a href="#" class="project-link">Projekt ansehen</a>
                 </div>
-                <div class="header-contact" style="margin-top: 10px;">
-                    <span class="lang-en">🗣️ German (B2 Intermediate) | English (C1 Advanced)</span>
-                    <span class="lang-de hidden">🗣️ Deutsch (B2 Mittelstufe) | Englisch (C1 Fortgeschritten)</span>
+
+                <div class="project-item">
+                    <h4>E-Commerce-Plattform</h4>
+                    <p>Vollständige E-Commerce-Lösung mit Warenkorb, Zahlungsintegration und Benutzerverwaltung.</p>
+                    <a href="#" class="project-link">Projekt ansehen</a>
                 </div>
-                <div class="header-contact" style="margin-top: 10px;">
-                    <a href="https://scholar.google.com" target="_blank">🎓 Google Scholar</a>
-                    <a href="https://www.scopus.com" target="_blank">📚 Scopus</a>
+
+                <div class="project-item">
+                    <h4>Aufgabenverwaltungs-App</h4>
+                    <p>Progressive Web App für effiziente Aufgabenverwaltung mit Datensynchronisierung und Offline-Unterstützung.</p>
+                    <a href="#" class="project-link">Projekt ansehen</a>
+                </div>
+
+                <div class="project-item">
+                    <h4>Datenanalytik-Dashboard</h4>
+                    <p>Interaktives Dashboard zur Visualisierung von Business-Daten mit Echtzeit-Updates und umfassenden Analysen.</p>
+                    <a href="#" class="project-link">Projekt ansehen</a>
                 </div>
             </div>
-            <div class="controls">
-                <div class="language-switcher">
-                    <button class="language-btn active" data-lang="en">English</button>
-                    <button class="language-btn" data-lang="de">Deutsch</button>
+
+            <div class="lang-section en hidden">
+                <h2>My Projects</h2>
+                
+                <div class="project-item">
+                    <h4>Portfolio Website</h4>
+                    <p>A responsive and multilingual portfolio website with modern design. Built with HTML5, CSS3, and JavaScript.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-item">
+                    <h4>E-Commerce Platform</h4>
+                    <p>Complete e-commerce solution with shopping cart, payment integration, and user management.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-item">
+                    <h4>Task Management App</h4>
+                    <p>Progressive Web App for efficient task management with data synchronization and offline support.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-item">
+                    <h4>Data Analytics Dashboard</h4>
+                    <p>Interactive dashboard for visualizing business data with real-time updates and comprehensive analytics.</p>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
             </div>
         </div>
 
-        <div class="nav-tabs">
-            <button class="nav-tab active" data-tab="experience">
-                <span class="lang-en">Experience</span>
-                <span class="lang-de hidden">Erfahrung</span>
-            </button>
-            <button class="nav-tab" data-tab="education">
-                <span class="lang-en">Education</span>
-                <span class="lang-de hidden">Bildung</span>
-            </button>
-            <button class="nav-tab" data-tab="teaching">
-                <span class="lang-en">Teaching</span>
-                <span class="lang-de hidden">Lehre</span>
-            </button>
-            <button class="nav-tab" data-tab="publications">
-                <span class="lang-en">Publications</span>
-                <span class="lang-de hidden">Veröffentlichungen</span>
-            </button>
-            <button class="nav-tab" data-tab="projects">
-                <span class="lang-en">Projects</span>
-                <span class="lang-de hidden">Projekte</span>
-            </button>
-            <button class="nav-tab" data-tab="courses">
-                <span class="lang-en">Courses</span>
-                <span class="lang-de hidden">Kurse</span>
-            </button>
-            <button class="nav-tab" data-tab="awards">
-                <span class="lang-en">Awards</span>
-                <span class="lang-de hidden">Auszeichnungen</span>
-            </button>
-            <button class="nav-tab" data-tab="supervision">
-                <span class="lang-en">Supervision</span>
-                <span class="lang-de hidden">Betreuung</span>
-            </button>
-        </div>
+        <!-- Skills Tab -->
+        <div id="skills" class="tab-content">
+            <div class="lang-section de">
+                <h2>Meine Fähigkeiten</h2>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Frontend-Technologien</h4>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
 
-        <div class="content">
-            <!-- Experience Tab -->
-            <div id="experience" class="tab-content active">
-                <div class="section-title">
-                    <span class="lang-en">Professional Experience</span>
-                    <span class="lang-de hidden">Berufliche Erfahrung</span>
-                </div>
+                    <div class="skill-category">
+                        <h4>Backend-Technologien</h4>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>PHP</li>
+                            <li>RESTful APIs</li>
+                            <li>Microservices</li>
+                        </ul>
+                    </div>
 
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Digital Transformation Analytics ML/AI/DRL</div>
-                            <div class="entry-title lang-de hidden">Digitale Transformation Analytics ML/KI/DRL</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                            <div class="entry-location lang-en">Location: Stuttgart, Germany</div>
-                            <div class="entry-location lang-de hidden">Standort: Stuttgart, Deutschland</div>
-                        </div>
-                        <div class="entry-date">Jan 2023 - Present</div>
+                    <div class="skill-category">
+                        <h4>Datenbanken & Tools</h4>
+                        <ul>
+                            <li>MySQL & PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Git & GitHub</li>
+                            <li>Docker</li>
+                            <li>CI/CD Pipelines</li>
+                        </ul>
                     </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Leading cutting-edge research in digital transformation, artificial intelligence, machine learning, and deep reinforcement learning applications across multiple domains including education, smart charging, and high-performance computing.</span>
-                        <span class="lang-de hidden">Führung von Spitzenforschung in digitaler Transformation, künstlicher Intelligenz, maschinellem Lernen und Deep Reinforcement Learning-Anwendungen über mehrere Bereiche hinweg, einschließlich Bildung, intelligentes Laden und Hochleistungsrechnen.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en">Developed innovative multi-modal learning analytics framework using deep reinforcement learning</li>
-                        <li lang="de" class="lang-de hidden">Entwicklung eines innovativen multimodalen Learning-Analytics-Frameworks mit Deep Reinforcement Learning</li>
-                        <li lang="en" class="lang-en">Led research on context-aware optimal resource management in electric vehicle charging systems</li>
-                        <li lang="de" class="lang-de hidden">Leitung der Forschung zu kontextbewusster optimaler Ressourcenverwaltung in Elektrofahrzeug-Ladesystemen</li>
-                        <li lang="en" class="lang-en">Published multiple high-impact papers in IEEE Access and top-tier conferences</li>
-                        <li lang="de" class="lang-de hidden">Veröffentlichung mehrerer wirkungsstarker Arbeiten in IEEE Access und erstklassigen Konferenzen</li>
-                        <li lang="en" class="lang-en">Teaching advanced courses in AI, Machine Learning, IoT, and Digital Transformation</li>
-                        <li lang="de" class="lang-de hidden">Unterricht fortgeschrittener Kurse in KI, maschinellem Lernen, IoT und digitaler Transformation</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">Digital Transformation</span>
-                        <span class="tag">Deep RL</span>
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">Smart Charging</span>
-                    </div>
-                </div>
 
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Optimisation Researcher - High Performance Computing</div>
-                            <div class="entry-title lang-de hidden">Optimierungsforscher - Hochleistungsrechnen</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart & HLRS</div>
-                            <div class="entry-location lang-en">Location: Stuttgart, Germany</div>
-                            <div class="entry-location lang-de hidden">Standort: Stuttgart, Deutschland</div>
-                        </div>
-                        <div class="entry-date">Jul 2018 - Dec 2022</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Conducted advanced research in optimization algorithms and high-performance computing, developing continuous integration and delivery frameworks for HPC environments. Collaborated with HLRS (High-Performance Computing Center Stuttgart) on large-scale computational projects.</span>
-                        <span class="lang-de hidden">Durchführung fortgeschrittener Forschung in Optimierungsalgorithmen und Hochleistungsrechnen, Entwicklung von Continuous Integration und Delivery Frameworks für HPC-Umgebungen. Zusammenarbeit mit HLRS (Höchstleistungsrechenzentrum Stuttgart) an groß angelegten Rechenprojekten.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en">Developed COaaS (Continuous Operations as a Service) framework for HPC using GitLab-Runner</li>
-                        <li lang="de" class="lang-de hidden">Entwicklung des COaaS (Continuous Operations as a Service) Frameworks für HPC mit GitLab-Runner</li>
-                        <li lang="en" class="lang-en">Implemented context-aware optimization algorithms for distributed computing resources</li>
-                        <li lang="de" class="lang-de hidden">Implementierung kontextbewusster Optimierungsalgorithmen für verteilte Rechenressourcen</li>
-                        <li lang="en" class="lang-en">Published research on CI/CD frameworks and optimization in BDIOT conferences</li>
-                        <li lang="de" class="lang-de hidden">Veröffentlichung von Forschungsarbeiten über CI/CD-Frameworks und Optimierung bei BDIOT-Konferenzen</li>
-                        <li lang="en" class="lang-en">Collaborated with HLRS on parallel computing and cluster optimization</li>
-                        <li lang="de" class="lang-de hidden">Zusammenarbeit mit HLRS bei parallelem Rechnen und Cluster-Optimierung</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">HPC</span>
-                        <span class="tag">Optimization</span>
-                        <span class="tag">CI/CD</span>
-                        <span class="tag">HLRS</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Research Scientist (IoT)</div>
-                            <div class="entry-title lang-de hidden">Forschungswissenschaftler (IoT)</div>
-                            <div class="entry-subtitle">University of Antwerp & IMEC</div>
-                            <div class="entry-location lang-en">Location: Antwerpen, Belgium</div>
-                            <div class="entry-location lang-de hidden">Standort: Antwerpen, Belgien</div>
-                        </div>
-                        <div class="entry-date">Mar 2016 - Jul 2018</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Conducted research on Internet of Things (IoT) systems, focusing on context-aware distribution, resource optimization, and smart infrastructure projects. Worked on innovative IoT frameworks for smart road construction and industrial applications.</span>
-                        <span class="lang-de hidden">Durchführung von Forschung zu Internet of Things (IoT)-Systemen mit Schwerpunkt auf kontextbewusster Verteilung, Ressourcenoptimierung und intelligenten Infrastrukturprojekten. Arbeit an innovativen IoT-Frameworks für intelligenten Straßenbau und industrielle Anwendungen.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en">Led Smart Road Tetra Project on IoT framework interoperability for intelligent infrastructure</li>
-                        <li lang="de" class="lang-de hidden">Leitung des Smart Road Tetra-Projekts zur IoT-Framework-Interoperabilität für intelligente Infrastruktur</li>
-                        <li lang="en" class="lang-en">Developed context-aware distribution mechanisms for constrained IoT environments</li>
-                        <li lang="de" class="lang-de hidden">Entwicklung kontextbewusster Verteilungsmechanismen für eingeschränkte IoT-Umgebungen</li>
-                        <li lang="en" class="lang-en">Applied particle swarm optimization for cost estimation in IoT systems</li>
-                        <li lang="de" class="lang-de hidden">Anwendung der Partikelschwarmoptimierung zur Kostenschätzung in IoT-Systemen</li>
-                        <li lang="en" class="lang-en">Published research on real-time smart road construction and IoT optimization</li>
-                        <li lang="de" class="lang-de hidden">Veröffentlichung von Forschungsarbeiten über Echtzeit-intelligenten Straßenbau und IoT-Optimierung</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Smart Infrastructure</span>
-                        <span class="tag">Context-Aware</span>
-                        <span class="tag">IMEC</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Researcher IoT</div>
-                            <div class="entry-title lang-de hidden">Forscher IoT</div>
-                            <div class="entry-subtitle">IMEC</div>
-                            <div class="entry-location lang-en">Location: Antwerpen, Belgium</div>
-                            <div class="entry-location lang-de hidden">Standort: Antwerpen, Belgien</div>
-                        </div>
-                        <div class="entry-date">Mar 2016 - Jul 2018</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Research position at IMEC (Interuniversity Microelectronics Centre), focusing on distributed uniform streaming frameworks, event stream processing, and platform transparency for IoT applications in fog computing environments.</span>
-                        <span class="lang-de hidden">Forschungsposition bei IMEC (Interuniversitäres Mikroelektronikzentrum) mit Schwerpunkt auf verteilten einheitlichen Streaming-Frameworks, Event-Stream-Verarbeitung und Plattformtransparenz für IoT-Anwendungen in Fog-Computing-Umgebungen.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en">Developed distributed uniform streaming framework for elastic fog computing</li>
-                        <li lang="de" class="lang-de hidden">Entwicklung eines verteilten einheitlichen Streaming-Frameworks für elastisches Fog Computing</li>
-                        <li lang="en" class="lang-en">Implemented event stream processing systems with platform transparency</li>
-                        <li lang="de" class="lang-de hidden">Implementierung von Event-Stream-Verarbeitungssystemen mit Plattformtransparenz</li>
-                        <li lang="en" class="lang-en">Contributed to CyPats project on innovative technologies for Flemish asphalt sector</li>
-                        <li lang="de" class="lang-de hidden">Beitrag zum CyPats-Projekt über innovative Technologien für den flämischen Asphaltsektor</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Fog Computing</span>
-                        <span class="tag">Event Processing</span>
-                        <span class="tag">IMEC</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Industry Experience - Software Engineer</div>
-                            <div class="entry-title lang-de hidden">Industrieerfahrung - Software-Ingenieur</div>
-                            <div class="entry-subtitle">InfoSpan & ITSS</div>
-                            <div class="entry-location lang-en">Location: Pakistan</div>
-                            <div class="entry-location lang-de hidden">Standort: Pakistan</div>
-                        </div>
-                        <div class="entry-date">Mar 2007 - Aug 2010</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Software development and engineering roles in the IT industry, working on enterprise software solutions, web applications, and database management systems. Gained valuable industry experience in software development lifecycle and professional practices.</span>
-                        <span class="lang-de hidden">Softwareentwicklungs- und Ingenieurpositionen in der IT-Branche, Arbeit an Unternehmenssoftwarelösungen, Webanwendungen und Datenbankverwaltungssystemen. Wertvolle Industrieerfahrung im Software-Entwicklungslebenszyklus und professionellen Praktiken gesammelt.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en">Developed enterprise software applications and web-based systems</li>
-                        <li lang="de" class="lang-de hidden">Entwicklung von Unternehmenssoftwareanwendungen und webbasierten Systemen</li>
-                        <li lang="en" class="lang-en">Managed database systems and implemented data-driven solutions</li>
-                        <li lang="de" class="lang-de hidden">Verwaltung von Datenbanksystemen und Implementierung datengesteuerter Lösungen</li>
-                        <li lang="en" class="lang-en">Collaborated with cross-functional teams on software projects</li>
-                        <li lang="de" class="lang-de hidden">Zusammenarbeit mit funktionsübergreifenden Teams an Softwareprojekten</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">Software Development</span>
-                        <span class="tag">Web Applications</span>
-                        <span class="tag">Database</span>
-                        <span class="tag">Enterprise</span>
+                    <div class="skill-category">
+                        <h4>Design & UI/UX</h4>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>UI/UX Design</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Education Tab -->
-            <div id="education" class="tab-content">
-                <div class="section-title">
-                    <span class="lang-en">Education</span>
-                    <span class="lang-de hidden">Bildung</span>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">PhD in Computing</div>
-                            <div class="entry-title lang-de hidden">Doktor der Informatik</div>
-                            <div class="entry-subtitle">Birmingham City University</div>
-                            <div class="entry-location lang-en">Specialization: Context-Aware Optimal Resource Management</div>
-                            <div class="entry-location lang-de hidden">Spezialisierung: Kontextbewusste optimale Ressourcenverwaltung</div>
-                        </div>
-                        <div class="entry-date">May 2022 - Jan 2025</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Dissertation: Context-Aware Optimal Resource Management in Electric Vehicle Smart2Charge. Research focused on deep reinforcement learning approaches for intelligent EV charging infrastructure optimization, enhancing resource utilization through context-awareness and adaptive learning strategies.</span>
-                        <span class="lang-de hidden">Dissertation: Kontextbewusste optimale Ressourcenverwaltung beim elektrischen Fahrzeug Smart2Charge. Forschung konzentrierte sich auf Deep Reinforcement Learning-Ansätze zur Optimierung intelligenter EV-Ladeinfrastruktur, Verbesserung der Ressourcennutzung durch Kontextbewusstsein und adaptive Lernstrategien.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Deep RL</span>
-                        <span class="tag">Smart Charging</span>
-                        <span class="tag">Context-Aware</span>
-                        <span class="tag">Resource Optimization</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">MSc in Software Technology</div>
-                            <div class="entry-title lang-de hidden">Master in Softwaretechnologie</div>
-                            <div class="entry-subtitle">Linnaeus University, Sweden</div>
-                            <div class="entry-location lang-en">Specialization: Big Data Visualisation</div>
-                            <div class="entry-location lang-de hidden">Spezialisierung: Big Data Visualisierung</div>
-                        </div>
-                        <div class="entry-date">Aug 2010 - Dec 2011</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Advanced studies in software technology with specialization in big data visualization techniques, distributed systems, and data analytics. Thesis focused on innovative approaches to visualizing large-scale datasets and extracting meaningful insights from complex data structures.</span>
-                        <span class="lang-de hidden">Fortgeschrittene Studien in Softwaretechnologie mit Spezialisierung auf Big-Data-Visualisierungstechniken, verteilte Systeme und Datenanalyse. Abschlussarbeit konzentrierte sich auf innovative Ansätze zur Visualisierung großer Datensätze und Extraktion aussagekräftiger Erkenntnisse aus komplexen Datenstrukturen.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Big Data</span>
-                        <span class="tag">Visualization</span>
-                        <span class="tag">Software Technology</span>
-                        <span class="tag">Distributed Systems</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Bachelor of Computer Science</div>
-                            <div class="entry-title lang-de hidden">Bachelor in Informatik</div>
-                            <div class="entry-subtitle">COMSATS University, Pakistan</div>
-                            <div class="entry-location lang-en">Foundation: Computer Science & Software Engineering</div>
-                            <div class="entry-location lang-de hidden">Grundlage: Informatik & Software Engineering</div>
-                        </div>
-                        <div class="entry-date">Aug 2002 - Jul 2006</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Comprehensive undergraduate education in computer science, covering fundamental topics including algorithms, data structures, software engineering, database systems, operating systems, and computer networks. Strong foundation in programming, system design, and problem-solving.</span>
-                        <span class="lang-de hidden">Umfassende Grundausbildung in Informatik mit grundlegenden Themen wie Algorithmen, Datenstrukturen, Software Engineering, Datenbanksysteme, Betriebssysteme und Computernetzwerke. Starke Grundlage in Programmierung, Systemdesign und Problemlösung.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Computer Science</span>
-                        <span class="tag">Programming</span>
-                        <span class="tag">Software Engineering</span>
-                        <span class="tag">Algorithms</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Teaching Tab -->
-            <div id="teaching" class="tab-content">
-                <div class="section-title">
-                    <span class="lang-en">Teaching Experience</span>
-                    <span class="lang-de hidden">Lehrerfahrung</span>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Digital Maturity Assessment & Strategy Design</div>
-                            <div class="entry-title lang-de hidden">Digitale Reifegradsbewertung & Strategiedesign</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Comprehensive course on digital transformation strategies, maturity assessment frameworks, and implementation roadmaps for organizations transitioning to digital-first operations.</span>
-                        <span class="lang-de hidden">Umfassender Kurs zu digitalen Transformationsstrategien, Reifegradsbewertungs-Frameworks und Implementierungs-Roadmaps für Organisationen, die zu digital-first Operationen übergehen.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>AI-Driven Business Model Innovation:</strong> Leveraging artificial intelligence for transformative business models</li>
-                        <li lang="de" class="lang-de hidden"><strong>KI-gesteuerte Geschäftsmodellinnovation:</strong> Nutzung künstlicher Intelligenz für transformative Geschäftsmodelle</li>
-                        <li lang="en" class="lang-en"><strong>Sustainable Digital Transformation:</strong> Implementing eco-friendly and sustainable digital practices</li>
-                        <li lang="de" class="lang-de hidden"><strong>Nachhaltige digitale Transformation:</strong> Implementierung umweltfreundlicher und nachhaltiger digitaler Praktiken</li>
-                        <li lang="en" class="lang-en"><strong>Cross-Cultural Technology Adoption:</strong> Managing digital transformation across diverse cultures</li>
-                        <li lang="de" class="lang-de hidden"><strong>Interkulturelle Technologieadaption:</strong> Verwaltung der digitalen Transformation über verschiedene Kulturen hinweg</li>
-                        <li lang="en" class="lang-en"><strong>SME Digital Acceleration:</strong> Strategies for small and medium enterprises</li>
-                        <li lang="de" class="lang-de hidden"><strong>KMU digitale Beschleunigung:</strong> Strategien für kleine und mittlere Unternehmen</li>
-                        <li lang="en" class="lang-en"><strong>Industry 4.0 Implementation:</strong> Smart manufacturing and IoT integration</li>
-                        <li lang="de" class="lang-de hidden"><strong>Industrie 4.0 Implementierung:</strong> Intelligente Fertigung und IoT-Integration</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Distributed Computing & Data Processing</div>
-                            <div class="entry-title lang-de hidden">Verteiltes Rechnen & Datenverarbeitung</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Advanced course on distributed computing frameworks and big data processing technologies, covering Apache Hadoop ecosystem, MapReduce programming, and large-scale data analytics.</span>
-                        <span class="lang-de hidden">Fortgeschrittener Kurs zu verteilten Computing-Frameworks und Big-Data-Verarbeitungstechnologien mit Apache Hadoop-Ökosystem, MapReduce-Programmierung und groß angelegter Datenanalyse.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>Apache Hadoop:</strong> HDFS architecture, distributed file systems, and cluster management</li>
-                        <li lang="de" class="lang-de hidden"><strong>Apache Hadoop:</strong> HDFS-Architektur, verteilte Dateisysteme und Cluster-Verwaltung</li>
-                        <li lang="en" class="lang-en"><strong>MapReduce Programming:</strong> Parallel data processing and algorithm design</li>
-                        <li lang="de" class="lang-de hidden"><strong>MapReduce-Programmierung:</strong> Parallele Datenverarbeitung und Algorithmus-Design</li>
-                        <li lang="en" class="lang-en"><strong>Apache Spark:</strong> In-memory computing, RDDs, and DataFrame APIs</li>
-                        <li lang="de" class="lang-de hidden"><strong>Apache Spark:</strong> In-Memory-Computing, RDDs und DataFrame-APIs</li>
-                        <li lang="en" class="lang-en"><strong>HDFS & Storage:</strong> Distributed storage strategies and data replication</li>
-                        <li lang="de" class="lang-de hidden"><strong>HDFS & Speicher:</strong> Verteilte Speicherstrategien und Datenreplikation</li>
-                        <li lang="en" class="lang-en"><strong>YARN Resource Management:</strong> Cluster resource allocation and scheduling</li>
-                        <li lang="de" class="lang-de hidden"><strong>YARN-Ressourcenverwaltung:</strong> Cluster-Ressourcenzuweisung und Planung</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Internet of Things & Cloud Architecture</div>
-                            <div class="entry-title lang-de hidden">Internet der Dinge & Cloud-Architektur</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Comprehensive IoT course covering end-to-end IoT systems, cloud integration, edge computing, and real-world IoT application development using AWS IoT Core and modern protocols.</span>
-                        <span class="lang-de hidden">Umfassender IoT-Kurs mit End-to-End-IoT-Systemen, Cloud-Integration, Edge Computing und realer IoT-Anwendungsentwicklung mit AWS IoT Core und modernen Protokollen.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>End-to-end IoT Systems:</strong> Device connectivity, data flow, and system architecture</li>
-                        <li lang="de" class="lang-de hidden"><strong>End-to-End-IoT-Systeme:</strong> Gerätekonnektivität, Datenfluss und Systemarchitektur</li>
-                        <li lang="en" class="lang-en"><strong>AWS IoT Core:</strong> Cloud-based IoT platform and device management</li>
-                        <li lang="de" class="lang-de hidden"><strong>AWS IoT Core:</strong> Cloud-basierte IoT-Plattform und Geräteverwaltung</li>
-                        <li lang="en" class="lang-en"><strong>MQTT Protocol:</strong> Lightweight messaging for IoT devices</li>
-                        <li lang="de" class="lang-de hidden"><strong>MQTT-Protokoll:</strong> Leichtgewichtiges Messaging für IoT-Geräte</li>
-                        <li lang="en" class="lang-en"><strong>Serverless Computing:</strong> AWS Lambda functions for IoT data processing</li>
-                        <li lang="de" class="lang-de hidden"><strong>Serverless Computing:</strong> AWS Lambda-Funktionen für IoT-Datenverarbeitung</li>
-                        <li lang="en" class="lang-en"><strong>Edge Computing:</strong> Local processing and intelligent edge devices</li>
-                        <li lang="de" class="lang-de hidden"><strong>Edge Computing:</strong> Lokale Verarbeitung und intelligente Edge-Geräte</li>
-                        <li lang="en" class="lang-en"><strong>DynamoDB:</strong> NoSQL database for IoT data storage and retrieval</li>
-                        <li lang="de" class="lang-de hidden"><strong>DynamoDB:</strong> NoSQL-Datenbank für IoT-Datenspeicherung und -abruf</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Digital Media & Professional Communication</div>
-                            <div class="entry-title lang-de hidden">Digitale Medien & Professionelle Kommunikation</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Course on effective communication in digital environments, social media impact, multilingual communication strategies, and research methodologies for the digital age.</span>
-                        <span class="lang-de hidden">Kurs über effektive Kommunikation in digitalen Umgebungen, Social-Media-Einfluss, mehrsprachige Kommunikationsstrategien und Forschungsmethodologien für das digitale Zeitalter.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>Social Media Impact:</strong> Understanding digital media influence on society</li>
-                        <li lang="de" class="lang-de hidden"><strong>Social-Media-Einfluss:</strong> Verständnis des Einflusses digitaler Medien auf die Gesellschaft</li>
-                        <li lang="en" class="lang-en"><strong>Multilingual Communication:</strong> Effective communication across languages and cultures</li>
-                        <li lang="de" class="lang-de hidden"><strong>Mehrsprachige Kommunikation:</strong> Effektive Kommunikation über Sprachen und Kulturen hinweg</li>
-                        <li lang="en" class="lang-en"><strong>Research Methodologies:</strong> Digital research methods and academic writing</li>
-                        <li lang="de" class="lang-de hidden"><strong>Forschungsmethodologien:</strong> Digitale Forschungsmethoden und akademisches Schreiben</li>
-                        <li lang="en" class="lang-en"><strong>Professional Presentation:</strong> Creating impactful digital presentations</li>
-                        <li lang="de" class="lang-de hidden"><strong>Professionelle Präsentation:</strong> Erstellung wirkungsvoller digitaler Präsentationen</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Software Engineering & DevOps Practices</div>
-                            <div class="entry-title lang-de hidden">Software Engineering & DevOps-Praktiken</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Modern software engineering practices with emphasis on DevOps culture, continuous integration/delivery, containerization, and infrastructure automation.</span>
-                        <span class="lang-de hidden">Moderne Software-Engineering-Praktiken mit Schwerpunkt auf DevOps-Kultur, Continuous Integration/Delivery, Containerisierung und Infrastrukturautomatisierung.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>CI/CD Pipelines:</strong> Automated build, test, and deployment workflows</li>
-                        <li lang="de" class="lang-de hidden"><strong>CI/CD-Pipelines:</strong> Automatisierte Build-, Test- und Deployment-Workflows</li>
-                        <li lang="en" class="lang-en"><strong>Docker Containerization:</strong> Container technology and microservices</li>
-                        <li lang="de" class="lang-de hidden"><strong>Docker-Containerisierung:</strong> Container-Technologie und Microservices</li>
-                        <li lang="en" class="lang-en"><strong>Kubernetes Orchestration:</strong> Container orchestration and scaling</li>
-                        <li lang="de" class="lang-de hidden"><strong>Kubernetes-Orchestrierung:</strong> Container-Orchestrierung und Skalierung</li>
-                        <li lang="en" class="lang-en"><strong>Infrastructure as Code:</strong> Terraform, Ansible, and automation tools</li>
-                        <li lang="de" class="lang-de hidden"><strong>Infrastructure as Code:</strong> Terraform, Ansible und Automatisierungstools</li>
-                        <li lang="en" class="lang-en"><strong>Version Control:</strong> Git workflows and collaborative development</li>
-                        <li lang="de" class="lang-de hidden"><strong>Versionskontrolle:</strong> Git-Workflows und kollaborative Entwicklung</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Advanced Machine Learning & AI</div>
-                            <div class="entry-title lang-de hidden">Fortgeschrittenes maschinelles Lernen & KI</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Advanced course on machine learning algorithms, deep neural networks, and reinforcement learning techniques for complex problem-solving and intelligent systems.</span>
-                        <span class="lang-de hidden">Fortgeschrittener Kurs zu Machine-Learning-Algorithmen, tiefen neuronalen Netzen und Reinforcement-Learning-Techniken für komplexe Problemlösung und intelligente Systeme.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>Neural Networks:</strong> Deep learning architectures and backpropagation</li>
-                        <li lang="de" class="lang-de hidden"><strong>Neuronale Netze:</strong> Deep-Learning-Architekturen und Backpropagation</li>
-                        <li lang="en" class="lang-en"><strong>Q-Learning:</strong> Value-based reinforcement learning methods</li>
-                        <li lang="de" class="lang-de hidden"><strong>Q-Learning:</strong> Wertbasierte Reinforcement-Learning-Methoden</li>
-                        <li lang="en" class="lang-en"><strong>Actor-Critic Methods:</strong> Advanced RL algorithms for continuous action spaces</li>
-                        <li lang="de" class="lang-de hidden"><strong>Actor-Critic-Methoden:</strong> Fortgeschrittene RL-Algorithmen für kontinuierliche Aktionsräume</li>
-                        <li lang="en" class="lang-en"><strong>Policy Gradients:</strong> Direct policy optimization techniques</li>
-                        <li lang="de" class="lang-de hidden"><strong>Policy Gradients:</strong> Direkte Policy-Optimierungstechniken</li>
-                        <li lang="en" class="lang-en"><strong>Deep RL Applications:</strong> Real-world applications of deep reinforcement learning</li>
-                        <li lang="de" class="lang-de hidden"><strong>Deep RL-Anwendungen:</strong> Reale Anwendungen von Deep Reinforcement Learning</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">High-Performance Computing</div>
-                            <div class="entry-title lang-de hidden">Hochleistungsrechnen</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Course on parallel computing, high-performance computing architectures, and optimization techniques for large-scale computational problems.</span>
-                        <span class="lang-de hidden">Kurs über paralleles Rechnen, Hochleistungsrechner-Architekturen und Optimierungstechniken für groß angelegte Rechenprobleme.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>OpenMP:</strong> Shared memory parallel programming</li>
-                        <li lang="de" class="lang-de hidden"><strong>OpenMP:</strong> Shared-Memory-Parallelprogrammierung</li>
-                        <li lang="en" class="lang-en"><strong>MPI (Message Passing Interface):</strong> Distributed memory parallel computing</li>
-                        <li lang="de" class="lang-de hidden"><strong>MPI (Message Passing Interface):</strong> Distributed-Memory-Parallelcomputing</li>
-                        <li lang="en" class="lang-en"><strong>Parallel Algorithms:</strong> Design and analysis of parallel computational methods</li>
-                        <li lang="de" class="lang-de hidden"><strong>Parallele Algorithmen:</strong> Design und Analyse paralleler Rechenmethoden</li>
-                        <li lang="en" class="lang-en"><strong>Cluster Computing:</strong> HPC cluster architecture and job scheduling</li>
-                        <li lang="de" class="lang-de hidden"><strong>Cluster Computing:</strong> HPC-Cluster-Architektur und Job-Planung</li>
-                        <li lang="en" class="lang-en"><strong>Performance Optimization:</strong> Profiling and tuning HPC applications</li>
-                        <li lang="de" class="lang-de hidden"><strong>Leistungsoptimierung:</strong> Profiling und Tuning von HPC-Anwendungen</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Educational Technology & Advanced AI</div>
-                            <div class="entry-title lang-de hidden">Bildungstechnologie & Fortgeschrittene KI</div>
-                            <div class="entry-subtitle">Hochschule für Technik Stuttgart</div>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Innovative course on applying artificial intelligence to educational contexts, including adaptive learning systems, federated learning, and multi-agent architectures for personalized education.</span>
-                        <span class="lang-de hidden">Innovativer Kurs zur Anwendung künstlicher Intelligenz in Bildungskontexten, einschließlich adaptiver Lernsysteme, föderiertem Lernen und Multi-Agenten-Architekturen für personalisierte Bildung.</span>
-                    </div>
-                    <ul class="entry-list">
-                        <li lang="en" class="lang-en"><strong>Adaptive Learning Systems:</strong> Personalized education using AI</li>
-                        <li lang="de" class="lang-de hidden"><strong>Adaptive Lernsysteme:</strong> Personalisierte Bildung mit KI</li>
-                        <li lang="en" class="lang-en"><strong>Federated Learning:</strong> Privacy-preserving distributed learning</li>
-                        <li lang="de" class="lang-de hidden"><strong>Föderiertes Lernen:</strong> Datenschutzwahrende verteilte Lernmethoden</li>
-                        <li lang="en" class="lang-en"><strong>Multi-Agent Architectures:</strong> Collaborative AI systems for education</li>
-                        <li lang="de" class="lang-de hidden"><strong>Multi-Agenten-Architekturen:</strong> Kollaborative KI-Systeme für Bildung</li>
-                        <li lang="en" class="lang-en"><strong>Educational Data Mining:</strong> Extracting insights from learning data</li>
-                        <li lang="de" class="lang-de hidden"><strong>Educational Data Mining:</strong> Extraktion von Erkenntnissen aus Lerndaten</li>
-                        <li lang="en" class="lang-en"><strong>Learning Analytics:</strong> KNIGHT framework and multi-modal LA</li>
-                        <li lang="de" class="lang-de hidden"><strong>Learning Analytics:</strong> KNIGHT-Framework und multimodales LA</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Publications Tab -->
-            <div id="publications" class="tab-content">
-                <div class="section-title">
-                    <span class="lang-en">Publications & Research</span>
-                    <span class="lang-de hidden">Veröffentlichungen & Forschung</span>
-                </div>
-
-                <h3 style="color: #667eea; margin: 30px 0 20px 0; font-size: 1.5em;">
-                    <span class="lang-en">Journal Publications</span>
-                    <span class="lang-de hidden">Zeitschriftenveröffentlichungen</span>
-                </h3>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Context-Aware Optimal Resource Management in Electric Vehicle Smart2Charge</div>
-                    <div class="publication-title lang-de hidden">Kontextbewusste optimale Ressourcenverwaltung in Electric Vehicle Smart2Charge</div>
-                    <div class="publication-authors">Sharif, Muddsair</div>
-                    <div class="publication-venue">Birmingham City University (Dissertation)</div>
-                    <span class="publication-year">2025</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Smart EV charging with context-awareness: Enhancing resource utilization via deep reinforcement learning</div>
-                    <div class="publication-title lang-de hidden">Intelligentes EV-Laden mit Kontextbewusstsein: Verbesserung der Ressourcennutzung durch Deep Reinforcement Learning</div>
-                    <div class="publication-authors">Sharif, Muddsair, and Huseyin Seker</div>
-                    <div class="publication-venue">IEEE Access 12 (2024): 7009-7027</div>
-                    <span class="publication-year">2024</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Multi-Modal LA in Personalized Education Using Deep Reinforcement Learning Based Approach</div>
-                    <div class="publication-title lang-de hidden">Multimodales LA in personalisierter Bildung mit Deep Reinforcement Learning-basiertem Ansatz</div>
-                    <div class="publication-authors">Sharif, Muddsair, and Dieter Uckelmann</div>
-                    <div class="publication-venue">IEEE Access 12 (2024): 54049-54065</div>
-                    <span class="publication-year">2024</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Context aware–resource optimality in electric vehicle Smart2Charge application: A deep reinforcement learning-based approach</div>
-                    <div class="publication-title lang-de hidden">Kontextbewusste Ressourcenoptimalität in elektrischer Fahrzeug Smart2Charge-Anwendung: Ein Deep Reinforcement Learning-basierter Ansatz</div>
-                    <div class="publication-authors">Sharif, Muddsair, Gero Lückemeyer, and Huseyin Seker</div>
-                    <div class="publication-venue">IEEE Access 11 (2023): 88583-88596</div>
-                    <span class="publication-year">2023</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Distributed uniform streaming framework: an elastic fog computing platform for event stream processing and platform transparency</div>
-                    <div class="publication-title lang-de hidden">Verteiltes einheitliches Streaming-Framework: Eine elastische Fog-Computing-Plattform für Event-Stream-Verarbeitung und Plattformtransparenz</div>
-                    <div class="publication-authors">Vanneste, Simon, et al.</div>
-                    <div class="publication-venue">Future Generation Computer Systems</div>
-                    <span class="publication-year">2019</span>
-                </div>
-
-                <h3 style="color: #667eea; margin: 40px 0 20px 0; font-size: 1.5em;">
-                    <span class="lang-en">Conference Publications</span>
-                    <span class="lang-de hidden">Konferenzveröffentlichungen</span>
-                </h3>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Reinforcement Learning-based Optimization of eBike Charging infrastructure</div>
-                    <div class="publication-title lang-de hidden">Reinforcement Learning-basierte Optimierung der eBike-Ladeinfrastruktur</div>
-                    <div class="publication-authors">Sharif, Muddsair, and Huseyin Seker</div>
-                    <div class="publication-venue">2024 IEEE/ACM International Conference on Big Data Computing (BDCAT)</div>
-                    <span class="publication-year">2024</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">KNIGHT: Machine Learning Methods to Enhance Individualized Learning</div>
-                    <div class="publication-title lang-de hidden">KNIGHT: Machine Learning-Methoden zur Verbesserung individualisierten Lernens</div>
-                    <div class="publication-authors">Sharif, Muddsair, and Dieter Uckelmann</div>
-                    <div class="publication-venue">International Conference on AI in Education Technology, Singapore</div>
-                    <span class="publication-year">2024</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Wahrnehmung von verkehrslärm im innenraum</div>
-                    <div class="publication-title lang-de hidden">Wahrnehmung von Verkehrslärm im Innenraum</div>
-                    <div class="publication-authors">Zeitler, Berndt, Jan-Philip Kirch, Muddsair Sharif, and André Flebig</div>
-                    <div class="publication-venue">Proceedings of DAGA</div>
-                    <span class="publication-year">2024</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">KNIGHT learning analytics architecture for betterment of student education</div>
-                    <div class="publication-title lang-de hidden">KNIGHT Learning Analytics Architektur zur Verbesserung der Studentenbildung</div>
-                    <div class="publication-authors">Sharif, Muddsair, Ferdinand Munz, and Dieter Uckelmann</div>
-                    <div class="publication-venue">International Conference on AI in Education Technology, Singapore</div>
-                    <span class="publication-year">2023</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">ARaaS: Context-Aware Optimal Charging Distribution Using Deep Reinforcement Learning</div>
-                    <div class="publication-title lang-de hidden">ARaaS: Kontextbewusste optimale Ladeverteilung mit Deep Reinforcement Learning</div>
-                    <div class="publication-authors">Sharif, Muddsair, Charitha Buddhika Heendeniya, and Gero Lückemeyer</div>
-                    <div class="publication-venue">iCity Conference</div>
-                    <span class="publication-year">2022</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">COaaS: Continuous Integration and Delivery framework for HPC using Gitlab-Runner</div>
-                    <div class="publication-title lang-de hidden">COaaS: Continuous Integration and Delivery Framework für HPC mit Gitlab-Runner</div>
-                    <div class="publication-authors">Muddsair Sharif, Skowronek Janto, and Gero Lueckemeyer</div>
-                    <div class="publication-venue">Proceedings of BDIOT</div>
-                    <span class="publication-year">2020</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Context-aware optimal charging distribution using deep reinforcement learning</div>
-                    <div class="publication-title lang-de hidden">Kontextbewusste optimale Ladeverteilung mit Deep Reinforcement Learning</div>
-                    <div class="publication-authors">Sharif, Muddsair, et al.</div>
-                    <div class="publication-venue">Proceedings of BDIOT</div>
-                    <span class="publication-year">2020</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Demonstrating innovative technologies for the Flemish asphalt sector in the CyPats project</div>
-                    <div class="publication-title lang-de hidden">Demonstration innovativer Technologien für den flämischen Asphaltsektor im CyPats-Projekt</div>
-                    <div class="publication-authors">Van den Bergh, W., et al.</div>
-                    <div class="publication-venue">IOP Publishing</div>
-                    <span class="publication-year">2019</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Context-aware distribution in constrained IoT environments</div>
-                    <div class="publication-title lang-de hidden">Kontextbewusste Verteilung in eingeschränkten IoT-Umgebungen</div>
-                    <div class="publication-authors">Eyckerman, Reinout, et al.</div>
-                    <div class="publication-venue">Springer</div>
-                    <span class="publication-year">2018</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">A particle swarm optimization-based heuristic for optimal cost estimation in internet of things environment</div>
-                    <div class="publication-title lang-de hidden">Eine Partikelschwarmoptimierungs-basierte Heuristik zur optimalen Kostenschätzung in IoT-Umgebungen</div>
-                    <div class="publication-authors">Sharif, Muddsair, et al.</div>
-                    <div class="publication-venue">Proceedings of BDIOT</div>
-                    <span class="publication-year">2018</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Towards real-time smart road construction</div>
-                    <div class="publication-title lang-de hidden">Richtung Echtzeit-intelligenter Straßenbau</div>
-                    <div class="publication-authors">Sharif, Muddsair, et al.</div>
-                    <div class="publication-venue">BDIOT2017</div>
-                    <span class="publication-year">2017</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">Context-aware optimization of distributed resources in IoT</div>
-                    <div class="publication-title lang-de hidden">Kontextbewusste Optimierung verteilter Ressourcen in IoT</div>
-                    <div class="publication-authors">Sharif, Muddsair, Siegfried Mercelis, and Peter Hellinckx</div>
-                    <div class="publication-venue">P2P 2017</div>
-                    <span class="publication-year">2017</span>
-                </div>
-
-                <div class="publication-item">
-                    <div class="publication-title lang-en">On fast recognition of isolated characters</div>
-                    <div class="publication-title lang-de hidden">Über schnelle Erkennung isolierter Zeichen</div>
-                    <div class="publication-authors">Azam, Sheikh Muhammad, Zubair Ali Mansoor, and Muddsair Sharif</div>
-                    <div class="publication-venue">2006 International Conference on Emerging Technologies</div>
-                    <span class="publication-year">2006</span>
-                </div>
-            </div>
-
-            <!-- Projects Tab -->
-            <div id="projects" class="tab-content">
-                <div class="section-title">
-                    <span class="lang-en">Research Projects</span>
-                    <span class="lang-de hidden">Forschungsprojekte</span>
-                </div>
-
-                <div class="grid-2">
-                    <div class="card">
-                        <div class="card-title lang-en">KNIGHT LA Framework</div>
-                        <div class="card-title lang-de hidden">KNIGHT LA-Framework</div>
-                        <div class="card-content">
-                            <span class="lang-en">Innovative framework for personalized education using multi-modal learning analytics. Applies deep reinforcement learning and adaptive learning systems to enhance individualized student learning experiences through intelligent data analysis and personalized recommendations.</span>
-                            <span class="lang-de hidden">Innovatives Framework für personalisierte Bildung mit multimodalen Learning Analytics. Wendet Deep Reinforcement Learning und adaptive Lernsysteme an, um individuelle Studentenlernerfahrungen durch intelligente Datenanalyse und personalisierte Empfehlungen zu verbessern.</span>
-                        </div>
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">Learning Analytics</span>
-                            <span class="tag">Deep RL</span>
-                            <span class="tag">Personalized Education</span>
-                            <span class="tag">Multi-Modal AI</span>
-                        </div>
+            <div class="lang-section en hidden">
+                <h2>My Skills</h2>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Frontend Technologies</h4>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                            <li>Responsive Design</li>
+                        </ul>
                     </div>
 
-                    <div class="card">
-                        <div class="card-title lang-en">ARaaS - Adaptive Resource as a Service</div>
-                        <div class="card-title lang-de hidden">ARaaS - Adaptive Resource as a Service</div>
-                        <div class="card-content">
-                            <span class="lang-en">Context-aware optimal charging distribution system for electric vehicles using deep reinforcement learning. Dynamically optimizes EV charging infrastructure by considering real-time context, energy demand, grid capacity, and user preferences to maximize resource utilization and minimize costs.</span>
-                            <span class="lang-de hidden">Kontextbewusstes optimales Ladeverteilungssystem für Elektrofahrzeuge mit Deep Reinforcement Learning. Optimiert dynamisch die EV-Ladeinfrastruktur unter Berücksichtigung von Echtzeit-Kontext, Energiebedarf, Netzkapazität und Benutzerpräferenzen zur Maximierung der Ressourcennutzung und Kostensenkung.</span>
-                        </div>
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">EV Charging</span>
-                            <span class="tag">Deep RL</span>
-                            <span class="tag">Context-Aware</span>
-                            <span class="tag">Smart Grid</span>
-                        </div>
+                    <div class="skill-category">
+                        <h4>Backend Technologies</h4>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>PHP</li>
+                            <li>RESTful APIs</li>
+                            <li>Microservices</li>
+                        </ul>
                     </div>
 
-                    <div class="card">
-                        <div class="card-title lang-en">COaaS - Continuous Operations as a Service</div>
-                        <div class="card-title lang-de hidden">COaaS - Continuous Operations as a Service</div>
-                        <div class="card-content">
-                            <span class="lang-en">CI/CD framework for high-performance computing environments using GitLab-Runner. Automates build, test, and deployment processes for HPC applications, enabling continuous integration and delivery workflows in large-scale computational environments. Developed in collaboration with HLRS.</span>
-                            <span class="lang-de hidden">CI/CD-Framework für Hochleistungsrechnerumgebungen mit GitLab-Runner. Automatisiert Build-, Test- und Deployment-Prozesse für HPC-Anwendungen und ermöglicht Continuous Integration- und Delivery-Workflows in groß angelegten Rechnerumgebungen. Entwickelt in Zusammenarbeit mit HLRS.</span>
-                        </div>
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">HPC</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">DevOps</span>
-                            <span class="tag">GitLab</span>
-                        </div>
+                    <div class="skill-category">
+                        <h4>Databases & Tools</h4>
+                        <ul>
+                            <li>MySQL & PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Git & GitHub</li>
+                            <li>Docker</li>
+                            <li>CI/CD Pipelines</li>
+                        </ul>
                     </div>
 
-                    <div class="card">
-                        <div class="card-title lang-en">Smart Road - Tetra Project</div>
-                        <div class="card-title lang-de hidden">Smart Road - Tetra-Projekt</div>
-                        <div class="card-content">
-                            <span class="lang-en">IoT frameworks interoperability for smart road construction. Developed innovative solutions for real-time monitoring and optimization of road construction processes using Internet of Things technologies, enabling intelligent infrastructure management and predictive maintenance for the Flemish asphalt sector.</span>
-                            <span class="lang-de hidden">IoT-Framework-Interoperabilität für intelligenten Straßenbau. Entwicklung innovativer Lösungen für Echtzeit-Überwachung und Optimierung von Straßenbauprozessen mit Internet of Things-Technologien, die intelligentes Infrastrukturmanagement und vorausschauende Wartung für den flämischen Asphaltsektor ermöglichen.</span>
-                        </div>
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">IoT</span>
-                            <span class="tag">Smart Infrastructure</span>
-                            <span class="tag">Real-Time Systems</span>
-                            <span class="tag">CyPats</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Courses Tab -->
-            <div id="courses" class="tab-content">
-                <div class="section-title">
-                    <span class="lang-en">Courses & Certifications</span>
-                    <span class="lang-de hidden">Kurse & Zertifizierungen</span>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Software Architecture for IoT</div>
-                            <div class="entry-title lang-de hidden">Softwarearchitektur für IoT</div>
-                            <div class="entry-subtitle">Coursera</div>
-                            <div class="entry-location lang-en">Certificate ID: TBTCXKNTYB</div>
-                            <div class="entry-location lang-de hidden">Zertifikat-ID: TBTCXKNTYB</div>
-                        </div>
-                        <div class="entry-date">2016</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Comprehensive course on designing and implementing software architectures for Internet of Things applications, covering system design patterns, scalability, security, and best practices for IoT development.</span>
-                        <span class="lang-de hidden">Umfassender Kurs zum Entwerfen und Implementieren von Softwarearchitekturen für Internet of Things-Anwendungen mit Systemdesignmustern, Skalierbarkeit, Sicherheit und Best Practices für IoT-Entwicklung.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Software Architecture</span>
-                        <span class="tag">System Design</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Practical Machine Learning</div>
-                            <div class="entry-title lang-de hidden">Praktisches maschinelles Lernen</div>
-                            <div class="entry-subtitle">Coursera</div>
-                        </div>
-                        <div class="entry-date">2016</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Hands-on course covering practical applications of machine learning algorithms, model training, validation techniques, and real-world implementation of ML solutions.</span>
-                        <span class="lang-de hidden">Praxisorientierter Kurs über praktische Anwendungen von Machine-Learning-Algorithmen, Modelltraining, Validierungstechniken und reale Implementierung von ML-Lösungen.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Data Science</span>
-                        <span class="tag">Practical ML</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Exploratory Data Analysis</div>
-                            <div class="entry-title lang-de hidden">Explorative Datenanalyse</div>
-                            <div class="entry-subtitle">Coursera</div>
-                            <div class="entry-location lang-en">Certificate ID: 9UTC62K8GT</div>
-                            <div class="entry-location lang-de hidden">Zertifikat-ID: 9UTC62K8GT</div>
-                        </div>
-                        <div class="entry-date">2016</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Course focused on techniques for exploring and visualizing data, identifying patterns, detecting anomalies, and testing hypotheses using statistical summaries and graphical representations.</span>
-                        <span class="lang-de hidden">Kurs mit Schwerpunkt auf Techniken zur Erkundung und Visualisierung von Daten, Mustererkennung, Anomalie-Erkennung und Hypothesentests mit statistischen Zusammenfassungen und grafischen Darstellungen.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Data Analysis</span>
-                        <span class="tag">Visualization</span>
-                        <span class="tag">Statistics</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Developing Data Products</div>
-                            <div class="entry-title lang-de hidden">Entwicklung von Datenprodukten</div>
-                            <div class="entry-subtitle">Coursera</div>
-                            <div class="entry-location lang-en">Certificate ID: 4YF6WCVXY2</div>
-                            <div class="entry-location lang-de hidden">Zertifikat-ID: 4YF6WCVXY2</div>
-                        </div>
-                        <div class="entry-date">2016</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Advanced course on building interactive data products, web applications, and dashboards for data science projects, including deployment strategies and user interface design.</span>
-                        <span class="lang-de hidden">Fortgeschrittener Kurs zum Aufbau interaktiver Datenprodukte, Webanwendungen und Dashboards für Data-Science-Projekte, einschließlich Deployment-Strategien und Benutzeroberflächendesign.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Data Products</span>
-                        <span class="tag">Web Applications</span>
-                        <span class="tag">Dashboards</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Microsoft Certified Technology Specialist</div>
-                            <div class="entry-title lang-de hidden">Microsoft Certified Technology Specialist</div>
-                            <div class="entry-subtitle">Microsoft</div>
-                        </div>
-                        <div class="entry-date">2007</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Professional certification demonstrating expertise in Microsoft technologies, software development, and system administration.</span>
-                        <span class="lang-de hidden">Professionelle Zertifizierung, die Fachwissen in Microsoft-Technologien, Softwareentwicklung und Systemadministration nachweist.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Microsoft</span>
-                        <span class="tag">Certification</span>
-                        <span class="tag">Technology</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Microsoft Valued Professional</div>
-                            <div class="entry-title lang-de hidden">Microsoft Valued Professional</div>
-                            <div class="entry-subtitle">Microsoft</div>
-                        </div>
-                        <div class="entry-date">2008</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Recognition from Microsoft for outstanding technical expertise, community contributions, and professional excellence in Microsoft technologies and platforms.</span>
-                        <span class="lang-de hidden">Anerkennung von Microsoft für herausragende technische Expertise, Community-Beiträge und professionelle Exzellenz in Microsoft-Technologien und Plattformen.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Microsoft MVP</span>
-                        <span class="tag">Recognition</span>
-                        <span class="tag">Community</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Awards Tab -->
-            <div id="awards" class="tab-content">
-                <div class="section-title">
-                    <span class="lang-en">Awards & Honors</span>
-                    <span class="lang-de hidden">Auszeichnungen & Ehren</span>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Best Researcher Award</div>
-                            <div class="entry-title lang-de hidden">Bester Forscher Award</div>
-                            <div class="entry-subtitle">University of Applied Sciences Stuttgart, Germany</div>
-                        </div>
-                        <div class="entry-date">2025</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Prestigious award from University of Applied Sciences Stuttgart (Hochschule für Technik Stuttgart) recognizing outstanding research contributions in artificial intelligence, digital transformation, and deep reinforcement learning. Acknowledged for innovative work in context-aware systems, EV charging optimization, and personalized education using AI.</span>
-                        <span class="lang-de hidden">Prestigeträchtiger Preis der Hochschule für Technik Stuttgart zur Anerkennung herausragender Forschungsbeiträge in künstlicher Intelligenz, digitaler Transformation und Deep Reinforcement Learning. Anerkannt für innovative Arbeit in kontextbewussten Systemen, EV-Ladeoptimierung und personalisierter Bildung mit KI.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Research Excellence</span>
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">Digital Transformation</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Fully Funded PhD Scholarship</div>
-                            <div class="entry-title lang-de hidden">Vollständig finanziertes Promotionsstipendium</div>
-                            <div class="entry-subtitle">Birmingham City University</div>
-                        </div>
-                        <div class="entry-date">2022 - 2025</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Awarded a prestigious fully funded scholarship from Birmingham City University for doctoral research in context-aware optimal resource management. This competitive scholarship covered full tuition fees and provided research funding for the duration of the PhD program, recognizing academic excellence and research potential.</span>
-                        <span class="lang-de hidden">Erhielt ein prestigeträchtiges vollständig finanziertes Stipendium der Birmingham City University für Doktorandenforschung in kontextbewusster optimaler Ressourcenverwaltung. Dieses wettbewerbsfähige Stipendium deckte die vollen Studiengebühren ab und stellte Forschungsfinanzierung für die Dauer des Promotionsprogramms bereit, wobei akademische Exzellenz und Forschungspotenzial anerkannt wurden.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Scholarship</span>
-                        <span class="tag">PhD Funding</span>
-                        <span class="tag">Research</span>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <div>
-                            <div class="entry-title lang-en">Best Paper Presentation Award</div>
-                            <div class="entry-title lang-de hidden">Bester Papier-Präsentationspreis</div>
-                            <div class="entry-subtitle">BDIOT Conference</div>
-                        </div>
-                        <div class="entry-date">2021</div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="lang-en">Received the Best Paper Presentation Award at the International Conference on Big Data and Internet of Things (BDIOT) for outstanding research presentation on context-aware optimal charging distribution using deep reinforcement learning. Selected from numerous international submissions for exceptional research quality and presentation excellence.</span>
-                        <span class="lang-de hidden">Erhielt den Best Paper Presentation Award auf der International Conference on Big Data and Internet of Things (BDIOT) für herausragende Forschungspräsentation zur kontextbewussten optimalen Ladeverteilung mit Deep Reinforcement Learning. Ausgewählt aus zahlreichen internationalen Einreichungen für außergewöhnliche Forschungsqualität und Präsentationsexzellenz.</span>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Best Paper</span>
-                        <span class="tag">Conference Award</span>
-                        <span class="tag">Deep RL</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Supervision Tab -->
-            <div id="supervision" class="tab-content">
-                <div class="section-title">
-                    <span class="lang-en">Student Supervision & Mentoring</span>
-                    <span class="lang-de hidden">Betreuung und Mentoring von Studenten</span>
-                </div>
-
-                <div class="grid-2">
-                    <div class="card">
-                        <div class="card-title lang-en">Master's Thesis Supervision</div>
-                        <div class="card-title lang-de hidden">Masterarbeitsbetreuung</div>
-                        <div class="card-content">
-                            <span class="lang-en">Successfully supervised 7 Master's level thesis projects in areas including AI, machine learning, IoT, distributed systems, and data analytics. Supervision includes students from Germany and Belgium, covering diverse research topics in advanced computer science.</span>
-                            <span class="lang-de hidden">Erfolgreiche Betreuung von 7 Master-Abschlussarbeiten in Bereichen wie KI, maschinelles Lernen, IoT, verteilte Systeme und Datenanalyse. Betreuung umfasst Studierende aus Deutschland und Belgien mit vielfältigen Forschungsthemen in fortgeschrittener Informatik.</span>
-                        </div>
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">7 Supervised</span>
-                            <span class="tag">3 from Belgium</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-title lang-en">Bachelor's Thesis Supervision</div>
-                        <div class="card-title lang-de hidden">Bachelorarbeitsbetreuung</div>
-                        <div class="card-content">
-                            <span class="lang-en">Supervised 5 Bachelor's level thesis projects covering fundamental topics in software engineering, web development, mobile applications, data structures, and computer networks. International supervision experience with students from German and Belgian universities.</span>
-                            <span class="lang-de hidden">Betreuung von 5 Bachelor-Abschlussarbeiten mit grundlegenden Themen in Software Engineering, Webentwicklung, mobilen Anwendungen, Datenstrukturen und Computernetzwerken. Internationale Betreuungserfahrung mit Studierenden deutscher und belgischer Universitäten.</span>
-                        </div>
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">5 Supervised</span>
-                            <span class="tag">2 from Belgium</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: 40px;">
-                    <div class="entry">
-                        <div class="entry-title lang-en">Supervision Overview</div>
-                        <div class="entry-title lang-de hidden">Betreuungsübersicht</div>
-                        <div class="entry-content">
-                            <span class="lang-en">Comprehensive thesis supervision experience across multiple universities and countries, guiding students through complex research projects in cutting-edge technology areas. Supervision focuses on developing strong research methodologies, critical thinking, and practical implementation skills.</span>
-                            <span class="lang-de hidden">Umfassende Erfahrung in der Betreuung von Abschlussarbeiten an mehreren Universitäten und Ländern, Begleitung von Studierenden durch komplexe Forschungsprojekte in hochmodernen Technologiebereichen. Betreuung konzentriert sich auf Entwicklung starker Forschungsmethoden, kritisches Denken und praktische Implementierungsfähigkeiten.</span>
-                        </div>
-                        <ul class="entry-list">
-                            <li lang="en" class="lang-en"><strong>Master's Level:</strong> 7 theses supervised (including 3 from Belgian universities)</li>
-                            <li lang="de" class="lang-de hidden"><strong>Master-Stufe:</strong> 7 Abschlussarbeiten betreut (einschließlich 3 von belgischen Universitäten)</li>
-                            <li lang="en" class="lang-en"><strong>Bachelor's Level:</strong> 5 theses supervised (including 2 from Belgian universities)</li>
-                            <li lang="de" class="lang-de hidden"><strong>Bachelor-Stufe:</strong> 5 Abschlussarbeiten betreut (einschließlich 2 von belgischen Universitäten)</li>
-                            <li lang="en" class="lang-en"><strong>Research Areas:</strong> AI/ML, Deep Reinforcement Learning, IoT, HPC, Distributed Systems</li>
-                            <li lang="de" class="lang-de hidden"><strong>Forschungsbereiche:</strong> KI/ML, Deep Reinforcement Learning, IoT, HPC, Verteilte Systeme</li>
-                            <li lang="en" class="lang-en"><strong>International Experience:</strong> Germany and Belgium</li>
-                            <li lang="de" class="lang-de hidden"><strong>Internationale Erfahrung:</strong> Deutschland und Belgien</li>
-                            <li lang="en" class="lang-en"><strong>Focus:</strong> Practical implementation, research methodology, academic writing</li>
-                            <li lang="de" class="lang-de hidden"><strong>Fokus:</strong> Praktische Implementierung, Forschungsmethodik, akademisches Schreiben</li>
+                    <div class="skill-category">
+                        <h4>Design & UI/UX</h4>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>UI/UX Design</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="footer">
-            <p lang="en" class="lang-en">© 2025 Muddsair Sharif. All rights reserved. | Last updated: December 17, 2025</p>
-            <p lang="de" class="lang-de hidden">© 2025 Muddsair Sharif. Alle Rechte vorbehalten. | Zuletzt aktualisiert: 17. Dezember 2025</p>
+        <!-- Contact Tab -->
+        <div id="contact" class="tab-content">
+            <div class="lang-section de">
+                <h2>Kontakt</h2>
+                <p>
+                    Ich freue mich, von dir zu hören! Kontaktiere mich gerne über folgende Kanäle:
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/muddsairsharif" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/muddsairsharif" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com/muddsairsharif" target="_blank">Twitter</a>
+                    <a href="mailto:contact@muddsairsharif.de">Email</a>
+                </div>
+                <p>
+                    <strong>Email:</strong> contact@muddsairsharif.de<br>
+                    <strong>Standort:</strong> Deutschland
+                </p>
+            </div>
+
+            <div class="lang-section en hidden">
+                <h2>Contact</h2>
+                <p>
+                    I'd love to hear from you! Feel free to reach out through the following channels:
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/muddsairsharif" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/muddsairsharif" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com/muddsairsharif" target="_blank">Twitter</a>
+                    <a href="mailto:contact@muddsairsharif.de">Email</a>
+                </div>
+                <p>
+                    <strong>Email:</strong> contact@muddsairsharif.de<br>
+                    <strong>Location:</strong> Germany
+                </p>
+            </div>
         </div>
     </div>
 
+    <footer>
+        <p>&copy; 2025 Mudd Sair Sharif. Alle Rechte vorbehalten. | &copy; 2025 Mudd Sair Sharif. All rights reserved.</p>
+        <p id="footerText">Gebaut mit HTML5, CSS3 und JavaScript | Built with HTML5, CSS3 and JavaScript</p>
+    </footer>
+
     <script>
-        // Tab Navigation
-        const navTabs = document.querySelectorAll('.nav-tab');
-        const tabContents = document.querySelectorAll('.tab-content');
+        // Language switching functionality
+        function switchLanguage(lang) {
+            const deElements = document.querySelectorAll('.de');
+            const enElements = document.querySelectorAll('.en');
+            const deBtnActive = document.getElementById('btn-de');
+            const enBtnActive = document.getElementById('btn-en');
 
-        navTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const tabName = tab.getAttribute('data-tab');
-                
-                // Remove active class from all tabs and contents
-                navTabs.forEach(t => t.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                // Add active class to clicked tab and corresponding content
-                tab.classList.add('active');
-                document.getElementById(tabName).classList.add('active');
-                
-                // Scroll to top of content
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-
-        // Language Switcher
-        const languageButtons = document.querySelectorAll('.language-btn');
-        let currentLang = 'en';
-
-        languageButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                currentLang = btn.getAttribute('data-lang');
-                
-                // Update button states
-                languageButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // Update language visibility
-                const langEn = document.querySelectorAll('.lang-en');
-                const langDe = document.querySelectorAll('.lang-de');
-                
-                if (currentLang === 'en') {
-                    langEn.forEach(el => el.classList.remove('hidden'));
-                    langDe.forEach(el => el.classList.add('hidden'));
-                    document.documentElement.lang = 'en';
-                } else {
-                    langEn.forEach(el => el.classList.add('hidden'));
-                    langDe.forEach(el => el.classList.remove('hidden'));
-                    document.documentElement.lang = 'de';
-                }
-            });
-        });
-
-        // Initialize
-        document.querySelector('.language-btn[data-lang="en"]').classList.add('active');
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey || e.metaKey) {
-                if (e.key === 'l') {
-                    e.preventDefault();
-                    const newLang = currentLang === 'en' ? 'de' : 'en';
-                    document.querySelector(`.language-btn[data-lang="${newLang}"]`).click();
-                }
+            if (lang === 'de') {
+                deElements.forEach(el => el.classList.remove('hidden'));
+                enElements.forEach(el => el.classList.add('hidden'));
+                deBtnActive.classList.add('active');
+                enBtnActive.classList.remove('active');
+                document.documentElement.lang = 'de';
+            } else if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden'));
+                deElements.forEach(el => el.classList.add('hidden'));
+                enBtnActive.classList.add('active');
+                deBtnActive.classList.remove('active');
+                document.documentElement.lang = 'en';
             }
-        });
+        }
 
-        // Smooth scroll for links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
+        // Tab switching functionality
+        function switchTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+            // Show selected tab
+            const selectedTab = document.getElementById(tabName);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
 
-        document.querySelectorAll('.entry, .card, .publication-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
+            // Add active class to clicked button
+            event.target.closest('.tab-btn').classList.add('active');
+        }
+
+        // Initialize language to German on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage('de');
         });
     </script>
 </body>

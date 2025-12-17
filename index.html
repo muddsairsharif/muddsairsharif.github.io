@@ -271,25 +271,26 @@
             }
         }
         /* Styling for the Cover Letter Text */
-        .letter-text p {
-            margin-bottom: 1.2rem; /* Adds space between paragraphs */
-            line-height: 1.6;      /* Improves readability */
-            color: #333;           /* Dark gray for better contrast */
-            text-align: justify;   /* Makes the letter look professional like a document */
-        }
-        
-        .letter-text strong {
-            color: #000;           /* Bolder black for names and greetings */
-        }
-        
-        /* Ensure the container is not too wide on large screens */
-        #cover-letter .experience-item {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-        }
+.letter-text p {
+    margin-bottom: 1.2rem; /* Adds space between paragraphs */
+    line-height: 1.6;      /* Improves readability */
+    color: #333;           /* Dark gray for better contrast */
+    text-align: justify;   /* Makes the letter look professional like a document */
+}
+
+.letter-text strong {
+    color: #000;           /* Bolder black for names and greetings */
+}
+
+/* Ensure the container is not too wide on large screens */
+#cover-letter .experience-item {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+       
     </style>
 </head>
 <body>
@@ -316,7 +317,7 @@
 
     <nav>
         <ul>
-            \<li\>\<button class="tab-btn" onclick="switchTab('cover-letter')"\>\<span class="lang-en"\>Cover Letter\</span\>\<span class="lang-de" style="display:none;"\>Anschreiben\</span\>\</button\>\</li\>
+            <li><button class="tab-btn" onclick="switchTab('cover-letter')"><span class="lang-en"\>Cover Letter</span\><span class="lang-de" style="display:none;">Anschreiben</span>\</button></li>
             <li><button class="tab-btn active" onclick="switchTab('experience')"><span class="lang-en">Experience</span><span class="lang-de" style="display:none;">Erfahrung</span></button></li>
             <li><button class="tab-btn" onclick="switchTab('education')"><span class="lang-en">Education</span><span class="lang-de" style="display:none;">Bildung</span></button></li>
             <li><button class="tab-btn" onclick="switchTab('teaching')"><span class="lang-en">Teaching</span><span class="lang-de" style="display:none;">Lehre</span></button></li>

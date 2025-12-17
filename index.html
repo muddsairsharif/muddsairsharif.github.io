@@ -270,6 +270,26 @@
                 margin-top: 1rem;
             }
         }
+        /* Styling for the Cover Letter Text */
+        .letter-text p {
+            margin-bottom: 1.2rem; /* Adds space between paragraphs */
+            line-height: 1.6;      /* Improves readability */
+            color: #333;           /* Dark gray for better contrast */
+            text-align: justify;   /* Makes the letter look professional like a document */
+        }
+        
+        .letter-text strong {
+            color: #000;           /* Bolder black for names and greetings */
+        }
+        
+        /* Ensure the container is not too wide on large screens */
+        #cover-letter .experience-item {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -296,6 +316,7 @@
 
     <nav>
         <ul>
+            \<li\>\<button class="tab-btn" onclick="switchTab('cover-letter')"\>\<span class="lang-en"\>Cover Letter\</span\>\<span class="lang-de" style="display:none;"\>Anschreiben\</span\>\</button\>\</li\>
             <li><button class="tab-btn active" onclick="switchTab('experience')"><span class="lang-en">Experience</span><span class="lang-de" style="display:none;">Erfahrung</span></button></li>
             <li><button class="tab-btn" onclick="switchTab('education')"><span class="lang-en">Education</span><span class="lang-de" style="display:none;">Bildung</span></button></li>
             <li><button class="tab-btn" onclick="switchTab('teaching')"><span class="lang-en">Teaching</span><span class="lang-de" style="display:none;">Lehre</span></button></li>
@@ -308,6 +329,46 @@
     </nav>
 
     <div class="container">
+<!-- cover letter  Tab -->
+        <div id="cover-letter" class="tab-content">
+    <div class="lang-section lang-en active">
+        <h2>Cover Letter: Digital Transformation Engineer</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title">Muddsair Sharif, PhD</div>
+                <div class="item-date">December 2025</div>
+            </div>
+            <div class="item-subtitle">Stuttgart, Germany | muddsairsharif@gmail.com</div>
+            <div class="item-description letter-text">
+                <p><strong>Dear Hiring Manager,</strong></p>
+                <p>I am writing to express my strong interest in the **Digital Transformation Engineer** position. With a PhD in Computing and over a decade of experience in AI, IoT, and High-Performance Computing, I offer a unique expertise in designing and implementing intelligent, scalable systems that drive organizational evolution.</p>
+                <p>Currently, as a researcher in Digital Transformation Analytics at HfT Stuttgart, I specialize in leveraging Deep Reinforcement Learning (DRL) and Machine Learning to optimize complex processes. My work on projects like M4_LAB and KNIGHT has allowed me to bridge the gap between high-level research and practical industrial application, focusing on sustainable urban development and AI-driven educational frameworks.</p>
+                <p>In my previous roles at IMEC and within the industry, I have successfully managed end-to-end IoT solutions and DevOps pipelines (CI/CD). I am adept at translating business requirements into technical architectures that are not only innovative but also robust and future-proof. My recent recognition with the "Best Researcher Award 2025" underscores my commitment to technical excellence and problem-solving.</p>
+                <p>I am eager to bring my skills in AI-driven innovation and strategic transformation to your engineering team. Thank you for your time and consideration.</p>
+                <p>Sincerely,<br><strong>Muddsair Sharif, PhD</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-section lang-de">
+        <h2>Anschreiben: Ingenieur für Digitale Transformation</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title">Muddsair Sharif, PhD</div>
+                <div class="item-date">Dezember 2025</div>
+            </div>
+            <div class="item-subtitle">Stuttgart, Deutschland | muddsairsharif@gmail.com</div>
+            <div class="item-description letter-text">
+                <p><strong>Sehr geehrte Damen und Herren,</strong></p>
+                <p>mit großem Interesse bewerbe ich mich auf die Position als **Ingenieur für Digitale Transformation**. Als promovierter Informatiker mit umfassender Erfahrung in der KI-Entwicklung, dem IoT und dem Hochleistungsrechnen verfüge ich über die notwendige Expertise, um komplexe Transformationsprozesse technisch zu leiten und erfolgreich umzusetzen.</p>
+                <p>In meiner aktuellen Tätigkeit an der Hochschule für Technik Stuttgart konzentriere ich mich auf die Analyse digitaler Transformationsprozesse mittels Deep Reinforcement Learning. Durch Projekte wie M4_LAB habe ich bewiesen, dass ich theoretische Innovationen in praxisnahe Lösungen für die nachhaltige Stadtentwicklung überführen kann. Mein Fokus liegt dabei stets auf der Optimierung von Ressourcen durch intelligente, datengestützte Systeme.</p>
+                <p>Neben meiner wissenschaftlichen Exzellenz, die 2025 mit dem „Best Researcher Award“ ausgezeichnet wurde, bringe ich fundierte Kenntnisse in Cloud-Architekturen und DevOps-Praktiken aus meiner Zeit in der Industrie und bei IMEC mit. Ich verstehe es, technische Roadmaps zu entwerfen, die den digitalen Reifegrad eines Unternehmens nachhaltig steigern.</p>
+                <p>Ich freue mich darauf, Ihnen meine Konzepte zur digitalen Strategie und technischen Umsetzung in einem persönlichen Gespräch näher vorzustellen.</p>
+                <p>Mit freundlichen Grüßen,<br><strong>Muddsair Sharif, PhD</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
         <!-- Experience Tab -->
         <div id="experience" class="tab-content active">
             <div class="lang-section lang-en active">

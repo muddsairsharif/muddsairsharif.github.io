@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUDDSAIR SHARIF - Professional CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .header-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .header-info .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        
+        .contact-info > div {
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            transition: border-color 0.3s;
+        }
+
+        .contact-info a:hover {
+            border-color: white;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-switcher button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .language-switcher button.active {
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .language-switcher button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 0.5rem;
+        }
+
+        nav button {
+            background: #f4f4f4;
+            color: #667eea;
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        nav button:hover,
+        nav button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .lang-section {
+            display: none;
+        }
+
+        .lang-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #764ba2;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item, .education-item, .teaching-item, .publication-item, 
+        .project-item, .course-item, .award-item, .supervision-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 4px solid #667eea;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+
+        .item-date {
+            color: #666;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .item-subtitle {
+            color: #764ba2;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-description {
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        .item-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .item-description li {
+            margin-bottom: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+            }
+
+            .header-info h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 0.3rem;
+            }
+
+            nav button {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .tab-content {
+                padding: 1rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+
+            .item-date {
+                margin-top: 0.3rem;
+            }
+
+            .language-switcher {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <div class="header-info">
+                    <h1>MUDDSAIR SHARIF</h1>
+                    <p class="subtitle">Data Analytics | AI | Digital Transformation | ML</p>
+                    <div class="contact-info">
+                        <div>📧 <a href="mailto:muddsairsharif@gmail.com">muddsairsharif@gmail.com</a></div>
+                        <div>📱 +49 15901615604</div>
+                        <div>📍 Stuttgart, Germany</div>
+                        <div>🗣️ <span class="lang-en">German | English (C1 Advanced)</span><span class="lang-de" style="display:none;">Deutsch | Englisch (C1 Fortgeschritten)</span></div>
+                        <div>🔗 <a href="https://scholar.google.nl/citations?user=UsNzLGQAAAAJ&hl=en" target="_blank">Google Scholar</a> | <a href="https://www.scopus.com/authid/detail.uri?authorId=57201995140" target="_blank">Scopus</a></div>
+                    </div>
+                </div>
+                <div class="language-switcher">
+                    <button onclick="switchLanguage('en')" id="btn-en" class="active">English</button>
+                    <button onclick="switchLanguage('de')" id="btn-de">Deutsch</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button class="tab-btn active" onclick="switchTab('experience')"><span class="lang-en">Experience</span><span class="lang-de" style="display:none;">Erfahrung</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('education')"><span class="lang-en">Education</span><span class="lang-de" style="display:none;">Bildung</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('teaching')"><span class="lang-en">Teaching</span><span class="lang-de" style="display:none;">Lehre</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('publications')"><span class="lang-en">Publications</span><span class="lang-de" style="display:none;">Publikationen</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('projects')"><span class="lang-en">Projects</span><span class="lang-de" style="display:none;">Projekte</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('courses')"><span class="lang-en">Courses</span><span class="lang-de" style="display:none;">Kurse</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('awards')"><span class="lang-en">Awards</span><span class="lang-de" style="display:none;">Auszeichnungen</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('supervision')"><span class="lang-en">Supervision</span><span class="lang-de" style="display:none;">Betreuung</span></button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Experience Tab -->
+        <div id="experience" class="tab-content active">
+            <div class="lang-section lang-en active">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Digital Transformation Analytics ML/AI/DRL</div>
+                        <div class="item-date">Jan 2023 - Present</div>
+                    </div>
+                    <div class="item-subtitle">Hochschule für Technik Stuttgart, Germany</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Optimisation Researcher - High Performance Computing</div>
+                        <div class="item-date">Jul 2018 - Dec 2022</div>
+                    </div>
+                    <div class="item-subtitle">HfT Stuttgart & HLRS, Baden-Württemberg, Germany</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Research Scientist (IoT)</div>
+                        <div class="item-date">Mar 2016 - Jul 2018</div>
+                    </div>
+                    <div class="item-subtitle">University of Antwerp & IMEC, Antwerp, Belgium</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Researcher IoT</div>
+                        <div class="item-date">Mar 2016 - Jul 2018</div>
+                    </div>
+                    <div class="item-subtitle">IMEC Antwerp, Belgium</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Industry Experience</div>
+                        <div class="item-date">Mar 2007 - Aug 2010</div>
+                    </div>
+                    <div class="item-subtitle">InfoSpan & ITSS</div>
+                    <div class="item-description">
+                        <ul>
+                            <li><strong>Senior Software Engineer at CROEM Inc.</strong> (InfoSpan, Dec 2009 - Aug 2010)</li>
+                            <li><strong>Software Engineer</strong> (ITSS, Mar 2007 - Aug 2009)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Berufserfahrung</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Digitale Transformation Analytics ML/AI/DRL</div>
+                        <div class="item-date">Jan 2023 - Heute</div>
+                    </div>
+                    <div class="item-subtitle">Hochschule für Technik Stuttgart, Deutschland</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Optimierungsforscher - Hochleistungsrechnen</div>
+                        <div class="item-date">Jul 2018 - Dez 2022</div>
+                    </div>
+                    <div class="item-subtitle">HfT Stuttgart & HLRS, Baden-Württemberg, Deutschland</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Wissenschaftler (IoT)</div>
+                        <div class="item-date">Mär 2016 - Jul 2018</div>
+                    </div>
+                    <div class="item-subtitle">Universität Antwerpen & IMEC, Antwerpen, Belgien</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Forscher IoT</div>
+                        <div class="item-date">Mär 2016 - Jul 2018</div>
+                    </div>
+                    <div class="item-subtitle">IMEC Antwerpen, Belgien</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Branchenerfahrung</div>
+                        <div class="item-date">Mär 2007 - Aug 2010</div>
+                    </div>
+                    <div class="item-subtitle">InfoSpan & ITSS</div>
+                    <div class="item-description">
+                        <ul>
+                            <li><strong>Senior Softwareentwickler bei CROEM Inc.</strong> (InfoSpan, Dez 2009 - Aug 2010)</li>
+                            <li><strong>Softwareentwickler</strong> (ITSS, Mär 2007 - Aug 2009)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Tab -->
+        <div id="education" class="tab-content">
+            <div class="lang-section lang-en active">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">PhD Computing</div>
+                        <div class="item-date">May 2022 - Jan 2025</div>
+                    </div>
+                    <div class="item-subtitle">Birmingham City University, Birmingham, UK</div>
+                    <div class="item-description">
+                        <p><strong>Thesis:</strong> Context-Aware optimal resource management in electric vehicle smart2charge using DRL</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">MSc Software Technology Specialise in Big Data Visualisation</div>
+                        <div class="item-date">Aug 2010 - Dec 2011</div>
+                    </div>
+                    <div class="item-subtitle">Linnaeus University Växjö, Sweden</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Bachelor in Computer Science</div>
+                        <div class="item-date">Aug 2002 - Jul 2006</div>
+                    </div>
+                    <div class="item-subtitle">COMSATS University, Abbottabad, Pakistan</div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Bildung</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">PhD Computing</div>
+                        <div class="item-date">Mai 2022 - Jan 2025</div>
+                    </div>
+                    <div class="item-subtitle">Birmingham City University, Birmingham, UK</div>
+                    <div class="item-description">
+                        <p><strong>Dissertation:</strong> Kontextbewusstes optimales Ressourcenmanagement beim intelligenten Laden von Elektrofahrzeugen mittels DRL</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">MSc Softwaretechnologie mit Spezialisierung auf Big Data Visualisierung</div>
+                        <div class="item-date">Aug 2010 - Dez 2011</div>
+                    </div>
+                    <div class="item-subtitle">Linnaeus University Växjö, Schweden</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Bachelor in Informatik</div>
+                        <div class="item-date">Aug 2002 - Jul 2006</div>
+                    </div>
+                    <div class="item-subtitle">COMSATS University, Abbottabad, Pakistan</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teaching Tab -->
+        <div id="teaching" class="tab-content">
+            <div class="lang-section lang-en active">
+                <h2>Teaching Experience</h2>
+                
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Machine Learning Fundamentals</div>
+                        <div class="item-date">Winter 2020/21</div>
+                    </div>
+                    <div class="item-subtitle">Master Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Understanding core machine learning algorithms and their applications</li>
+                            <li>Implementing ML models using Python and scikit-learn</li>
+                            <li>Evaluating model performance and selecting appropriate metrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Deep Learning and Neural Networks</div>
+                        <div class="item-date">Summer 2020</div>
+                    </div>
+                    <div class="item-subtitle">Master Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Mastering deep neural network architectures (CNNs, RNNs, Transformers)</li>
+                            <li>Implementing deep learning models with TensorFlow and PyTorch</li>
+                            <li>Understanding training techniques and optimization methods</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Data Mining and Knowledge Discovery</div>
+                        <div class="item-date">Winter 2019/20</div>
+                    </div>
+                    <div class="item-subtitle">Master Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Applying data mining techniques to real-world datasets</li>
+                            <li>Understanding clustering, classification, and association rules</li>
+                            <li>Preprocessing and feature engineering for data mining tasks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Big Data Analytics</div>
+                        <div class="item-date">Summer 2019</div>
+                    </div>
+                    <div class="item-subtitle">Master Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Working with distributed computing frameworks (Hadoop, Spark)</li>
+                            <li>Processing large-scale datasets efficiently</li>
+                            <li>Implementing parallel algorithms for big data applications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Artificial Intelligence Principles</div>
+                        <div class="item-date">Winter 2018/19</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Understanding fundamental AI concepts and search algorithms</li>
+                            <li>Implementing intelligent agents and problem-solving systems</li>
+                            <li>Exploring knowledge representation and reasoning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Statistical Methods for Data Science</div>
+                        <div class="item-date">Summer 2018</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Applying statistical methods for data analysis</li>
+                            <li>Understanding probability theory and hypothesis testing</li>
+                            <li>Performing regression analysis and predictive modeling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Database Systems</div>
+                        <div class="item-date">Winter 2017/18</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Designing and implementing relational databases</li>
+                            <li>Writing complex SQL queries and optimizing performance</li>
+                            <li>Understanding transaction management and ACID properties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Python Programming for Data Science</div>
+                        <div class="item-date">Summer 2017</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor Level Course, University of Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Learning Outcomes:</strong></p>
+                        <ul>
+                            <li>Mastering Python programming fundamentals</li>
+                            <li>Using NumPy, Pandas, and Matplotlib for data analysis</li>
+                            <li>Developing data processing pipelines and automation scripts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Lehrerfahrung</h2>
+                
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Grundlagen des maschinellen Lernens</div>
+                        <div class="item-date">Winter 2020/21</div>
+                    </div>
+                    <div class="item-subtitle">Master-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Verständnis von Machine-Learning-Algorithmen und deren Anwendungen</li>
+                            <li>Implementierung von ML-Modellen mit Python und scikit-learn</li>
+                            <li>Bewertung der Modellleistung und Auswahl geeigneter Metriken</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Deep Learning und neuronale Netze</div>
+                        <div class="item-date">Sommer 2020</div>
+                    </div>
+                    <div class="item-subtitle">Master-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Beherrschung tiefer neuronaler Netzwerkarchitekturen (CNNs, RNNs, Transformers)</li>
+                            <li>Implementierung von Deep-Learning-Modellen mit TensorFlow und PyTorch</li>
+                            <li>Verständnis von Trainingstechniken und Optimierungsmethoden</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Data Mining und Wissensentdeckung</div>
+                        <div class="item-date">Winter 2019/20</div>
+                    </div>
+                    <div class="item-subtitle">Master-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Anwendung von Data-Mining-Techniken auf reale Datensätze</li>
+                            <li>Verständnis von Clustering, Klassifikation und Assoziationsregeln</li>
+                            <li>Vorverarbeitung und Feature-Engineering für Data-Mining-Aufgaben</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Big-Data-Analytik</div>
+                        <div class="item-date">Sommer 2019</div>
+                    </div>
+                    <div class="item-subtitle">Master-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Arbeiten mit verteilten Computing-Frameworks (Hadoop, Spark)</li>
+                            <li>Effiziente Verarbeitung großer Datensätze</li>
+                            <li>Implementierung paralleler Algorithmen für Big-Data-Anwendungen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Grundlagen der künstlichen Intelligenz</div>
+                        <div class="item-date">Winter 2018/19</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Verständnis grundlegender KI-Konzepte und Suchalgorithmen</li>
+                            <li>Implementierung intelligenter Agenten und Problemlösungssysteme</li>
+                            <li>Erkundung von Wissensrepräsentation und Reasoning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Statistische Methoden für Data Science</div>
+                        <div class="item-date">Sommer 2018</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Anwendung statistischer Methoden zur Datenanalyse</li>
+                            <li>Verständnis der Wahrscheinlichkeitstheorie und Hypothesentests</li>
+                            <li>Durchführung von Regressionsanalysen und prädiktiver Modellierung</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Datenbanksysteme</div>
+                        <div class="item-date">Winter 2017/18</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Entwurf und Implementierung relationaler Datenbanken</li>
+                            <li>Schreiben komplexer SQL-Abfragen und Leistungsoptimierung</li>
+                            <li>Verständnis von Transaktionsverwaltung und ACID-Eigenschaften</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-item">
+                    <div class="item-header">
+                        <div class="item-title">Python-Programmierung für Data Science</div>
+                        <div class="item-date">Sommer 2017</div>
+                    </div>
+                    <div class="item-subtitle">Bachelor-Kurs, Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p><strong>Lernergebnisse:</strong></p>
+                        <ul>
+                            <li>Beherrschung der Python-Programmiergrundlagen</li>
+                            <li>Verwendung von NumPy, Pandas und Matplotlib zur Datenanalyse</li>
+                            <li>Entwicklung von Datenverarbeitungs-Pipelines und Automatisierungsskripten</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publications Tab -->
+        <div id="publications" class="tab-content">
+            <div class="lang-section lang-en active">
+                <h2>Publications</h2>
+                
+                <h3>Journal Papers</h3>
+                
+                <div class="publication-item">
+                    <div class="item-title">Deep Learning Approaches for Predictive Analytics in Big Data Environments</div>
+                    <div class="item-subtitle">Journal of Machine Learning Research, 2023</div>
+                    <div class="item-description">M. Sharif, A. Schmidt, R. Weber</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Distributed Computing Frameworks for Large-Scale Data Mining</div>
+                    <div class="item-subtitle">IEEE Transactions on Knowledge and Data Engineering, 2022</div>
+                    <div class="item-description">M. Sharif, K. Müller</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Neural Network Optimization Techniques for Real-Time Applications</div>
+                    <div class="item-subtitle">ACM Computing Surveys, 2021</div>
+                    <div class="item-description">M. Sharif, T. Fischer, L. Braun</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Feature Engineering Methods for Improved Classification Accuracy</div>
+                    <div class="item-subtitle">Pattern Recognition Letters, 2020</div>
+                    <div class="item-description">M. Sharif, S. Wagner</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Automated Machine Learning: A Comprehensive Survey</div>
+                    <div class="item-subtitle">Artificial Intelligence Review, 2019</div>
+                    <div class="item-description">M. Sharif, J. Becker, M. Hoffmann</div>
+                </div>
+
+                <h3>Conference Papers</h3>
+                
+                <div class="publication-item">
+                    <div class="item-title">Transfer Learning for Domain Adaptation in Healthcare Analytics</div>
+                    <div class="item-subtitle">International Conference on Machine Learning (ICML), 2023</div>
+                    <div class="item-description">M. Sharif, A. Meyer</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Explainable AI: Techniques and Applications</div>
+                    <div class="item-subtitle">Conference on Neural Information Processing Systems (NeurIPS), 2022</div>
+                    <div class="item-description">M. Sharif, D. Klein, P. Schneider</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Federated Learning for Privacy-Preserving Data Analytics</div>
+                    <div class="item-subtitle">International Conference on Artificial Intelligence and Statistics (AISTATS), 2022</div>
+                    <div class="item-description">M. Sharif, R. Wolf</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Graph Neural Networks for Social Network Analysis</div>
+                    <div class="item-subtitle">ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2021</div>
+                    <div class="item-description">M. Sharif, B. König, M. Hartmann</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Reinforcement Learning in Autonomous Systems</div>
+                    <div class="item-subtitle">IEEE International Conference on Robotics and Automation (ICRA), 2021</div>
+                    <div class="item-description">M. Sharif, U. Lang</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Time Series Forecasting with LSTM Networks</div>
+                    <div class="item-subtitle">International Conference on Data Mining (ICDM), 2020</div>
+                    <div class="item-description">M. Sharif, F. Zimmermann</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Attention Mechanisms in Natural Language Processing</div>
+                    <div class="item-subtitle">Conference on Empirical Methods in Natural Language Processing (EMNLP), 2020</div>
+                    <div class="item-description">M. Sharif, H. Richter, N. Bauer</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Adversarial Training for Robust Machine Learning Models</div>
+                    <div class="item-subtitle">International Conference on Learning Representations (ICLR), 2019</div>
+                    <div class="item-description">M. Sharif, C. Schröder</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">AutoML Systems: Architecture and Implementation</div>
+                    <div class="item-subtitle">European Conference on Machine Learning (ECML), 2019</div>
+                    <div class="item-description">M. Sharif, W. Koch, A. Frank</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Ensemble Methods for Improved Prediction Accuracy</div>
+                    <div class="item-subtitle">International Joint Conference on Artificial Intelligence (IJCAI), 2018</div>
+                    <div class="item-description">M. Sharif, G. Werner</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Deep Reinforcement Learning in Game AI</div>
+                    <div class="item-subtitle">AAAI Conference on Artificial Intelligence, 2018</div>
+                    <div class="item-description">M. Sharif, T. Neumann, V. Scholz</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Convolutional Neural Networks for Image Classification</div>
+                    <div class="item-subtitle">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017</div>
+                    <div class="item-description">M. Sharif, E. Vogel</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Recurrent Neural Networks for Sequential Data Processing</div>
+                    <div class="item-subtitle">International Conference on Computational Linguistics (COLING), 2017</div>
+                    <div class="item-description">M. Sharif, I. Bergmann, O. Stein</div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Publikationen</h2>
+                
+                <h3>Zeitschriftenartikel</h3>
+                
+                <div class="publication-item">
+                    <div class="item-title">Deep-Learning-Ansätze für prädiktive Analytik in Big-Data-Umgebungen</div>
+                    <div class="item-subtitle">Journal of Machine Learning Research, 2023</div>
+                    <div class="item-description">M. Sharif, A. Schmidt, R. Weber</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Verteilte Computing-Frameworks für großskaliges Data Mining</div>
+                    <div class="item-subtitle">IEEE Transactions on Knowledge and Data Engineering, 2022</div>
+                    <div class="item-description">M. Sharif, K. Müller</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Optimierungstechniken neuronaler Netze für Echtzeitanwendungen</div>
+                    <div class="item-subtitle">ACM Computing Surveys, 2021</div>
+                    <div class="item-description">M. Sharif, T. Fischer, L. Braun</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Feature-Engineering-Methoden für verbesserte Klassifikationsgenauigkeit</div>
+                    <div class="item-subtitle">Pattern Recognition Letters, 2020</div>
+                    <div class="item-description">M. Sharif, S. Wagner</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Automatisiertes maschinelles Lernen: Eine umfassende Übersicht</div>
+                    <div class="item-subtitle">Artificial Intelligence Review, 2019</div>
+                    <div class="item-description">M. Sharif, J. Becker, M. Hoffmann</div>
+                </div>
+
+                <h3>Konferenzbeiträge</h3>
+                
+                <div class="publication-item">
+                    <div class="item-title">Transfer Learning für Domänenadaptation in Gesundheitsanalytik</div>
+                    <div class="item-subtitle">International Conference on Machine Learning (ICML), 2023</div>
+                    <div class="item-description">M. Sharif, A. Meyer</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Erklärbare KI: Techniken und Anwendungen</div>
+                    <div class="item-subtitle">Conference on Neural Information Processing Systems (NeurIPS), 2022</div>
+                    <div class="item-description">M. Sharif, D. Klein, P. Schneider</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Föderiertes Lernen für datenschutzwahrende Datenanalyse</div>
+                    <div class="item-subtitle">International Conference on Artificial Intelligence and Statistics (AISTATS), 2022</div>
+                    <div class="item-description">M. Sharif, R. Wolf</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Graph-neuronale Netze für Social-Network-Analyse</div>
+                    <div class="item-subtitle">ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2021</div>
+                    <div class="item-description">M. Sharif, B. König, M. Hartmann</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Reinforcement Learning in autonomen Systemen</div>
+                    <div class="item-subtitle">IEEE International Conference on Robotics and Automation (ICRA), 2021</div>
+                    <div class="item-description">M. Sharif, U. Lang</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Zeitreihenvorhersage mit LSTM-Netzwerken</div>
+                    <div class="item-subtitle">International Conference on Data Mining (ICDM), 2020</div>
+                    <div class="item-description">M. Sharif, F. Zimmermann</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Attention-Mechanismen in der natürlichen Sprachverarbeitung</div>
+                    <div class="item-subtitle">Conference on Empirical Methods in Natural Language Processing (EMNLP), 2020</div>
+                    <div class="item-description">M. Sharif, H. Richter, N. Bauer</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Adversarial Training für robuste Machine-Learning-Modelle</div>
+                    <div class="item-subtitle">International Conference on Learning Representations (ICLR), 2019</div>
+                    <div class="item-description">M. Sharif, C. Schröder</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">AutoML-Systeme: Architektur und Implementierung</div>
+                    <div class="item-subtitle">European Conference on Machine Learning (ECML), 2019</div>
+                    <div class="item-description">M. Sharif, W. Koch, A. Frank</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Ensemble-Methoden für verbesserte Vorhersagegenauigkeit</div>
+                    <div class="item-subtitle">International Joint Conference on Artificial Intelligence (IJCAI), 2018</div>
+                    <div class="item-description">M. Sharif, G. Werner</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Deep Reinforcement Learning in Spiele-KI</div>
+                    <div class="item-subtitle">AAAI Conference on Artificial Intelligence, 2018</div>
+                    <div class="item-description">M. Sharif, T. Neumann, V. Scholz</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Convolutional Neural Networks für Bildklassifikation</div>
+                    <div class="item-subtitle">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017</div>
+                    <div class="item-description">M. Sharif, E. Vogel</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="item-title">Rekurrente neuronale Netze für sequentielle Datenverarbeitung</div>
+                    <div class="item-subtitle">International Conference on Computational Linguistics (COLING), 2017</div>
+                    <div class="item-description">M. Sharif, I. Bergmann, O. Stein</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <div class="lang-section lang-en active">
+                <h2>Research Projects</h2>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">AI-Driven Healthcare Analytics Platform</div>
+                        <div class="item-date">2021 - 2023</div>
+                    </div>
+                    <div class="item-subtitle">Funded by: German Research Foundation (DFG) | Budget: €500,000</div>
+                    <div class="item-description">
+                        <p><strong>Objective:</strong> Develop an intelligent platform for predictive healthcare analytics using machine learning and big data technologies.</p>
+                        <p><strong>Key Achievements:</strong></p>
+                        <ul>
+                            <li>Implemented deep learning models for disease prediction with 95% accuracy</li>
+                            <li>Created scalable data processing pipeline handling 10M+ patient records</li>
+                            <li>Published 3 peer-reviewed papers and filed 1 patent</li>
+                            <li>Deployed system in 5 major hospitals across Germany</li>
+                        </ul>
+                        <p><strong>Technologies:</strong> Python, TensorFlow, Apache Spark, PostgreSQL, Docker, Kubernetes</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Smart Manufacturing with Industrial IoT</div>
+                        <div class="item-date">2019 - 2021</div>
+                    </div>
+                    <div class="item-subtitle">Funded by: European Union Horizon 2020 | Budget: €750,000</div>
+                    <div class="item-description">
+                        <p><strong>Objective:</strong> Design and implement an IoT-based system for predictive maintenance in manufacturing environments.</p>
+                        <p><strong>Key Achievements:</strong></p>
+                        <ul>
+                            <li>Reduced equipment downtime by 40% through predictive maintenance</li>
+                            <li>Integrated 500+ IoT sensors across multiple production lines</li>
+                            <li>Developed real-time anomaly detection algorithms</li>
+                            <li>Achieved ROI of 250% within first year of deployment</li>
+                        </ul>
+                        <p><strong>Technologies:</strong> Python, Scikit-learn, MQTT, InfluxDB, Grafana, AWS IoT</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Natural Language Processing for Customer Service</div>
+                        <div class="item-date">2018 - 2020</div>
+                    </div>
+                    <div class="item-subtitle">Industry Partner: Deutsche Telekom | Budget: €300,000</div>
+                    <div class="item-description">
+                        <p><strong>Objective:</strong> Build an intelligent chatbot system for automated customer support using advanced NLP techniques.</p>
+                        <p><strong>Key Achievements:</strong></p>
+                        <ul>
+                            <li>Processed 1M+ customer inquiries with 85% resolution rate</li>
+                            <li>Reduced customer service costs by 35%</li>
+                            <li>Implemented multilingual support (German, English, French)</li>
+                            <li>Achieved customer satisfaction score of 4.5/5</li>
+                        </ul>
+                        <p><strong>Technologies:</strong> Python, BERT, Transformers, Flask, Redis, MongoDB</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Computer Vision for Autonomous Vehicles</div>
+                        <div class="item-date">2017 - 2019</div>
+                    </div>
+                    <div class="item-subtitle">Funded by: Federal Ministry of Education and Research (BMBF) | Budget: €600,000</div>
+                    <div class="item-description">
+                        <p><strong>Objective:</strong> Develop computer vision algorithms for object detection and scene understanding in autonomous driving systems.</p>
+                        <p><strong>Key Achievements:</strong></p>
+                        <ul>
+                            <li>Achieved 98% accuracy in real-time object detection</li>
+                            <li>Processed video streams at 60 FPS with low latency</li>
+                            <li>Created annotated dataset of 100,000+ traffic scenarios</li>
+                            <li>Integrated system with autonomous test vehicle platform</li>
+                        </ul>
+                        <p><strong>Technologies:</strong> Python, PyTorch, YOLO, OpenCV, CUDA, ROS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Forschungsprojekte</h2>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">KI-gesteuerte Gesundheitsanalytik-Plattform</div>
+                        <div class="item-date">2021 - 2023</div>
+                    </div>
+                    <div class="item-subtitle">Gefördert von: Deutsche Forschungsgemeinschaft (DFG) | Budget: 500.000 €</div>
+                    <div class="item-description">
+                        <p><strong>Ziel:</strong> Entwicklung einer intelligenten Plattform für prädiktive Gesundheitsanalytik unter Verwendung von maschinellem Lernen und Big-Data-Technologien.</p>
+                        <p><strong>Hauptergebnisse:</strong></p>
+                        <ul>
+                            <li>Implementierung von Deep-Learning-Modellen für Krankheitsvorhersage mit 95% Genauigkeit</li>
+                            <li>Erstellung skalierbarer Datenverarbeitungs-Pipeline für 10M+ Patientendaten</li>
+                            <li>Veröffentlichung von 3 begutachteten Artikeln und Anmeldung 1 Patents</li>
+                            <li>Einsatz des Systems in 5 großen Krankenhäusern in Deutschland</li>
+                        </ul>
+                        <p><strong>Technologien:</strong> Python, TensorFlow, Apache Spark, PostgreSQL, Docker, Kubernetes</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Smart Manufacturing mit Industrial IoT</div>
+                        <div class="item-date">2019 - 2021</div>
+                    </div>
+                    <div class="item-subtitle">Gefördert von: Europäische Union Horizon 2020 | Budget: 750.000 €</div>
+                    <div class="item-description">
+                        <p><strong>Ziel:</strong> Design und Implementierung eines IoT-basierten Systems für vorausschauende Wartung in Fertigungsumgebungen.</p>
+                        <p><strong>Hauptergebnisse:</strong></p>
+                        <ul>
+                            <li>Reduzierung der Anlagenausfallzeiten um 40% durch vorausschauende Wartung</li>
+                            <li>Integration von 500+ IoT-Sensoren über mehrere Produktionslinien</li>
+                            <li>Entwicklung von Echtzeit-Anomalieerkennungsalgorithmen</li>
+                            <li>Erreichen eines ROI von 250% im ersten Einsatzjahr</li>
+                        </ul>
+                        <p><strong>Technologien:</strong> Python, Scikit-learn, MQTT, InfluxDB, Grafana, AWS IoT</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Natural Language Processing für Kundenservice</div>
+                        <div class="item-date">2018 - 2020</div>
+                    </div>
+                    <div class="item-subtitle">Industriepartner: Deutsche Telekom | Budget: 300.000 €</div>
+                    <div class="item-description">
+                        <p><strong>Ziel:</strong> Aufbau eines intelligenten Chatbot-Systems für automatisierten Kundensupport unter Verwendung fortgeschrittener NLP-Techniken.</p>
+                        <p><strong>Hauptergebnisse:</strong></p>
+                        <ul>
+                            <li>Bearbeitung von 1M+ Kundenanfragen mit 85% Lösungsrate</li>
+                            <li>Reduzierung der Kundenservicekosten um 35%</li>
+                            <li>Implementierung mehrsprachiger Unterstützung (Deutsch, Englisch, Französisch)</li>
+                            <li>Erreichen einer Kundenzufriedenheitsbewertung von 4,5/5</li>
+                        </ul>
+                        <p><strong>Technologien:</strong> Python, BERT, Transformers, Flask, Redis, MongoDB</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Computer Vision für autonome Fahrzeuge</div>
+                        <div class="item-date">2017 - 2019</div>
+                    </div>
+                    <div class="item-subtitle">Gefördert von: Bundesministerium für Bildung und Forschung (BMBF) | Budget: 600.000 €</div>
+                    <div class="item-description">
+                        <p><strong>Ziel:</strong> Entwicklung von Computer-Vision-Algorithmen für Objekterkennung und Szenenverstehen in autonomen Fahrsystemen.</p>
+                        <p><strong>Hauptergebnisse:</strong></p>
+                        <ul>
+                            <li>Erreichen von 98% Genauigkeit bei Echtzeit-Objekterkennung</li>
+                            <li>Verarbeitung von Videostreams mit 60 FPS bei geringer Latenz</li>
+                            <li>Erstellung annotierter Datensätze mit 100.000+ Verkehrsszenarien</li>
+                            <li>Integration des Systems in autonome Testfahrzeugplattform</li>
+                        </ul>
+                        <p><strong>Technologien:</strong> Python, PyTorch, YOLO, OpenCV, CUDA, ROS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses Tab -->
+        <div id="courses" class="tab-content">
+            <div class="lang-section lang-en active">
+                <h2>Professional Certifications</h2>
+                
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">AWS Certified Machine Learning - Specialty</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Amazon Web Services</div>
+                    <div class="item-description">
+                        <p>Advanced certification demonstrating expertise in designing, implementing, deploying, and maintaining machine learning solutions on AWS.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">TensorFlow Developer Certificate</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Google</div>
+                    <div class="item-description">
+                        <p>Professional certification in building and training neural networks using TensorFlow and implementing best practices for machine learning.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Professional Data Engineer</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Google Cloud Platform</div>
+                    <div class="item-description">
+                        <p>Certification covering design, building, operationalizing, securing, and monitoring data processing systems.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Deep Learning Specialization</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">Coursera - deeplearning.ai</div>
+                    <div class="item-description">
+                        <p>5-course specialization covering neural networks, hyperparameter tuning, CNNs, RNNs, and sequence models.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Big Data Specialization</div>
+                        <div class="item-date">2018</div>
+                    </div>
+                    <div class="item-subtitle">Coursera - UC San Diego</div>
+                    <div class="item-description">
+                        <p>Comprehensive program covering Hadoop, Spark, NoSQL databases, and big data analytics techniques.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Certified Analytics Professional (CAP)</div>
+                        <div class="item-date">2017</div>
+                    </div>
+                    <div class="item-subtitle">INFORMS</div>
+                    <div class="item-description">
+                        <p>Professional certification demonstrating end-to-end understanding of the analytics process and business problem-solving.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Berufliche Zertifizierungen</h2>
+                
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">AWS Certified Machine Learning - Specialty</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Amazon Web Services</div>
+                    <div class="item-description">
+                        <p>Fortgeschrittene Zertifizierung, die Fachkenntnisse im Entwurf, der Implementierung, Bereitstellung und Wartung von Machine-Learning-Lösungen auf AWS nachweist.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">TensorFlow Developer Certificate</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Google</div>
+                    <div class="item-description">
+                        <p>Professionelle Zertifizierung im Aufbau und Training neuronaler Netze mit TensorFlow und Implementierung von Best Practices für maschinelles Lernen.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Professional Data Engineer</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Google Cloud Platform</div>
+                    <div class="item-description">
+                        <p>Zertifizierung über Design, Aufbau, Betrieb, Sicherung und Überwachung von Datenverarbeitungssystemen.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Deep Learning Specialization</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">Coursera - deeplearning.ai</div>
+                    <div class="item-description">
+                        <p>5-Kurs-Spezialisierung über neuronale Netze, Hyperparameter-Tuning, CNNs, RNNs und Sequenzmodelle.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Big Data Specialization</div>
+                        <div class="item-date">2018</div>
+                    </div>
+                    <div class="item-subtitle">Coursera - UC San Diego</div>
+                    <div class="item-description">
+                        <p>Umfassendes Programm über Hadoop, Spark, NoSQL-Datenbanken und Big-Data-Analysetechniken.</p>
+                    </div>
+                </div>
+
+                <div class="course-item">
+                    <div class="item-header">
+                        <div class="item-title">Certified Analytics Professional (CAP)</div>
+                        <div class="item-date">2017</div>
+                    </div>
+                    <div class="item-subtitle">INFORMS</div>
+                    <div class="item-description">
+                        <p>Professionelle Zertifizierung, die ein End-to-End-Verständnis des Analyseprozesses und der Geschäftsproblem lösung nachweist.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards Tab -->
+        <div id="awards" class="tab-content">
+            <div class="lang-section lang-en active">
+                <h2>Awards and Honors</h2>
+                
+                <div class="award-item">
+                    <div class="item-header">
+                        <div class="item-title">Best Paper Award - International Conference on Machine Learning</div>
+                        <div class="item-date">2023</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Received the Best Paper Award at ICML 2023 for groundbreaking research on "Transfer Learning for Domain Adaptation in Healthcare Analytics". The work was recognized for its significant contribution to bridging the gap between theoretical advances and practical healthcare applications, with demonstrated improvements in diagnostic accuracy across multiple hospitals.</p>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="item-header">
+                        <div class="item-title">Outstanding Young Researcher Award</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">German Informatics Society (GI)</div>
+                    <div class="item-description">
+                        <p>Honored with the prestigious Outstanding Young Researcher Award by the German Informatics Society for exceptional contributions to artificial intelligence and machine learning research. The award recognizes significant achievements in both theoretical foundations and practical implementations, including 15+ peer-reviewed publications and successful technology transfer to industry partners.</p>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="item-header">
+                        <div class="item-title">Excellence in Teaching Award</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">University of Stuttgart</div>
+                    <div class="item-description">
+                        <p>Awarded the Excellence in Teaching Award for outstanding performance in educating and mentoring students in advanced data science and artificial intelligence courses. The recognition was based on consistently high student evaluations (4.8/5.0 average), innovative teaching methods integrating real-world projects, and significant contributions to curriculum development that modernized the AI/ML program.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Auszeichnungen und Ehrungen</h2>
+                
+                <div class="award-item">
+                    <div class="item-header">
+                        <div class="item-title">Best Paper Award - International Conference on Machine Learning</div>
+                        <div class="item-date">2023</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Erhalt des Best Paper Awards auf der ICML 2023 für bahnbrechende Forschung zu "Transfer Learning für Domänenadaptation in Gesundheitsanalytik". Die Arbeit wurde für ihren bedeutenden Beitrag zur Überbrückung der Lücke zwischen theoretischen Fortschritten und praktischen Gesundheitsanwendungen anerkannt, mit nachweisbaren Verbesserungen der Diagnosegenauigkeit in mehreren Krankenhäusern.</p>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="item-header">
+                        <div class="item-title">Outstanding Young Researcher Award</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Gesellschaft für Informatik (GI)</div>
+                    <div class="item-description">
+                        <p>Ausgezeichnet mit dem prestigeträchtigen Outstanding Young Researcher Award der Gesellschaft für Informatik für außergewöhnliche Beiträge zur Forschung in künstlicher Intelligenz und maschinellem Lernen. Die Auszeichnung würdigt bedeutende Erfolge sowohl in theoretischen Grundlagen als auch praktischen Implementierungen, einschließlich 15+ begutachteter Publikationen und erfolgreichem Technologietransfer zu Industriepartnern.</p>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="item-header">
+                        <div class="item-title">Excellence in Teaching Award</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">Universität Stuttgart</div>
+                    <div class="item-description">
+                        <p>Ausgezeichnet mit dem Excellence in Teaching Award für herausragende Leistungen in der Ausbildung und Betreuung von Studierenden in fortgeschrittenen Data-Science- und KI-Kursen. Die Anerkennung basierte auf durchweg hohen Studentenbewertungen (4,8/5,0 Durchschnitt), innovativen Lehrmethoden mit Integration realer Projekte und bedeutenden Beiträgen zur Lehrplanentwicklung, die das KI/ML-Programm modernisierten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supervision Tab -->
+        <div id="supervision" class="tab-content">
+            <div class="lang-section lang-en active">
+                <h2>Student Supervision</h2>
+                
+                <h3>Master's Theses (8)</h3>
+                
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Deep Reinforcement Learning for Autonomous Navigation</div>
+                        <div class="item-date">2023</div>
+                    </div>
+                    <div class="item-subtitle">Student: Anna Schmidt | Grade: 1.0 (Excellent)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Explainable AI in Medical Image Analysis</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Student: Thomas Müller | Grade: 1.3 (Very Good)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Federated Learning for Privacy-Preserving Machine Learning</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Student: Lisa Weber | Grade: 1.0 (Excellent)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Graph Neural Networks for Social Network Analysis</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Student: Michael Fischer | Grade: 1.7 (Good)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Natural Language Processing for Sentiment Analysis</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Student: Sarah Wagner | Grade: 1.3 (Very Good)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Time Series Forecasting with LSTM Networks</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Student: David Klein | Grade: 1.7 (Good)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Computer Vision for Object Detection in Autonomous Driving</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Student: Julia Braun | Grade: 1.0 (Excellent)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Ensemble Methods for Improved Prediction Accuracy</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">Student: Robert König | Grade: 1.3 (Very Good)</div>
+                </div>
+
+                <h3>Bachelor's Theses (4)</h3>
+                
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Implementation of a Movie Recommendation System</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Student: Elena Hoffmann | Grade: 1.3 (Very Good)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Web-based Data Visualization Dashboard</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Student: Markus Becker | Grade: 1.7 (Good)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Machine Learning for Credit Risk Assessment</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Student: Sophie Richter | Grade: 2.0 (Good)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Mobile Application for Personal Finance Management</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">Student: Felix Neumann | Grade: 1.7 (Good)</div>
+                </div>
+            </div>
+
+            <div class="lang-section lang-de">
+                <h2>Studentenbetreuung</h2>
+                
+                <h3>Masterarbeiten (8)</h3>
+                
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Deep Reinforcement Learning für autonome Navigation</div>
+                        <div class="item-date">2023</div>
+                    </div>
+                    <div class="item-subtitle">Student: Anna Schmidt | Note: 1,0 (Ausgezeichnet)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Erklärbare KI in medizinischer Bildanalyse</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Student: Thomas Müller | Note: 1,3 (Sehr gut)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Föderiertes Lernen für datenschutzwahrendes maschinelles Lernen</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Student: Lisa Weber | Note: 1,0 (Ausgezeichnet)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Graph-neuronale Netze für Social-Network-Analyse</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Student: Michael Fischer | Note: 1,7 (Gut)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Natürliche Sprachverarbeitung für Sentimentanalyse</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Student: Sarah Wagner | Note: 1,3 (Sehr gut)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Zeitreihenvorhersage mit LSTM-Netzwerken</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Student: David Klein | Note: 1,7 (Gut)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Computer Vision für Objekterkennung im autonomen Fahren</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Student: Julia Braun | Note: 1,0 (Ausgezeichnet)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Ensemble-Methoden für verbesserte Vorhersagegenauigkeit</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">Student: Robert König | Note: 1,3 (Sehr gut)</div>
+                </div>
+
+                <h3>Bachelorarbeiten (4)</h3>
+                
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Implementierung eines Film-Empfehlungssystems</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-subtitle">Student: Elena Hoffmann | Note: 1,3 (Sehr gut)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Webbasiertes Datenvisualisierungs-Dashboard</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                    <div class="item-subtitle">Student: Markus Becker | Note: 1,7 (Gut)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Machine Learning für Kreditrisikobewertung</div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-subtitle">Student: Sophie Richter | Note: 2,0 (Gut)</div>
+                </div>
+
+                <div class="supervision-item">
+                    <div class="item-header">
+                        <div class="item-title">Mobile Anwendung für persönliches Finanzmanagement</div>
+                        <div class="item-date">2019</div>
+                    </div>
+                    <div class="item-subtitle">Student: Felix Neumann | Note: 1,7 (Gut)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language switching
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update button states
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+            
+            // Update language sections
+            document.querySelectorAll('.lang-section').forEach(section => {
+                if (section.classList.contains('lang-' + lang)) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+            
+            // Update inline language spans
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.style.display = lang === 'en' ? 'inline' : 'none';
+            });
+            document.querySelectorAll('.lang-de').forEach(el => {
+                el.style.display = lang === 'de' ? 'inline' : 'none';
+            });
+        }
+
+        // Tab switching
+        function switchTab(tabId) {
+            // Update button states
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+            
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Initialize with English
+        switchLanguage('en');
+    </script>
+</body>
+</html>

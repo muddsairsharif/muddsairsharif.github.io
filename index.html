@@ -1,670 +1,1004 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mudd Sair Sharif - Portfolio</title>
+    <title>Muddsair Sharif - Professional CV</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .header-content p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        .language-switcher {
-            display: flex;
-            gap: 10px;
-        }
-
-        .language-switcher button {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .language-switcher button.active {
-            background: white;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .language-switcher button:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
-
-        nav {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            gap: 1rem;
-        }
-
-        nav button {
-            background: none;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            color: #667eea;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-            font-weight: 500;
-        }
-
-        nav button:hover,
-        nav button.active {
-            color: #764ba2;
-            border-bottom-color: #764ba2;
-        }
-
-        .tab-content {
-            display: none;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .lang-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .lang-section.hidden {
-            display: none;
-        }
-
-        .lang-section h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            opacity: 0.7;
-        }
-
-        h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        h3 {
-            color: #764ba2;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        .project-item {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #667eea;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .project-item:hover {
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-            transform: translateX(5px);
-        }
-
-        .project-item h4 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-link {
-            display: inline-block;
-            margin-top: 0.5rem;
-            padding: 8px 15px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .project-link:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .skill-category {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 5px;
-            border-left: 4px solid #764ba2;
-        }
-
-        .skill-category h4 {
-            color: #764ba2;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            padding: 0.3rem 0;
-            color: #666;
-        }
-
-        .skill-category li:before {
-            content: "▸ ";
-            color: #667eea;
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            text-align: center;
-        }
-
-        .social-links {
-            margin: 1rem 0;
-        }
-
-        .social-links a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #764ba2;
-            text-decoration: underline;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+        .header-info h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .header-info .subtitle { font-size: 1.1rem; opacity: 0.95; margin-bottom: 1rem; }
+        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; font-size: 0.95rem; margin-bottom: 1rem; }
+        .contact-info div { opacity: 0.95; }
+        .contact-info strong { font-weight: 600; }
+        .academic-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .academic-links a { color: white; text-decoration: none; padding: 0.5rem 1rem; background: rgba(255, 255, 255, 0.2); border-radius: 5px; transition: all 0.3s ease; }
+        .academic-links a:hover { background: rgba(255, 255, 255, 0.3); }
+        .language-switcher { display: flex; gap: 10px; }
+        .language-switcher button { background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; }
+        .language-switcher button.active { background: white; color: #667eea; font-weight: bold; }
+        .language-switcher button:hover { background: rgba(255, 255, 255, 0.3); }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 20px; }
+        nav { background: white; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 2rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 0.5rem; }
+        nav button { background: none; border: none; padding: 10px 20px; font-size: 0.95rem; cursor: pointer; color: #667eea; transition: all 0.3s ease; border-bottom: 3px solid transparent; font-weight: 500; }
+        nav button:hover, nav button.active { color: #764ba2; border-bottom-color: #764ba2; }
+        .tab-content { display: none; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .tab-content.active { display: block; }
+        .lang-en, .lang-de { display: none; }
+        .lang-en.active, .lang-de.active { display: block; }
+        h2 { color: #667eea; margin-bottom: 1.5rem; font-size: 2rem; border-bottom: 3px solid #667eea; padding-bottom: 0.5rem; }
+        h3 { color: #764ba2; margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.3rem; }
+        h4 { color: #667eea; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        p { margin-bottom: 1rem; line-height: 1.8; text-align: justify; }
+        .entry-item { background: #f9f9f9; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #667eea; border-radius: 5px; transition: all 0.3s ease; }
+        .entry-item:hover { box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2); transform: translateX(5px); }
+        .entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+        .entry-title { flex: 1; }
+        .entry-date { color: #764ba2; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+        .entry-org { color: #666; font-style: italic; margin-bottom: 0.5rem; }
+        .entry-description { text-align: justify; }
+        .entry-description ul { margin-left: 1.5rem; margin-top: 0.5rem; }
+        .entry-description li { margin-bottom: 0.3rem; }
+        .publication-item { background: #f9f9f9; padding: 1.25rem; margin-bottom: 1rem; border-left: 4px solid #764ba2; border-radius: 5px; transition: all 0.3s ease; }
+        .publication-item:hover { box-shadow: 0 5px 15px rgba(118, 75, 162, 0.2); transform: translateX(5px); }
+        .pub-title { color: #667eea; font-weight: 600; margin-bottom: 0.3rem; }
+        .pub-authors { color: #666; font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .pub-venue { color: #764ba2; font-style: italic; font-size: 0.9rem; }
+        footer { background: #333; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer p { margin: 0.5rem 0; }
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header-content h1 {
-                font-size: 1.8rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-            }
-
-            nav button {
-                width: 100%;
-                text-align: center;
-                border-bottom: none;
-                border-right: 3px solid transparent;
-            }
-
-            nav button.active {
-                border-right-color: #764ba2;
-                border-bottom: none;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-
-            .language-switcher {
-                margin-top: 1rem;
-                justify-content: center;
-            }
+            .header-top { flex-direction: column; }
+            .header-info h1 { font-size: 1.8rem; }
+            .contact-info { grid-template-columns: 1fr; }
+            nav ul { flex-direction: column; gap: 0; }
+            nav button { width: 100%; text-align: center; border-bottom: none; border-right: 3px solid transparent; }
+            nav button.active { border-right-color: #764ba2; border-bottom: none; }
+            .entry-header { flex-direction: column; }
+            .entry-date { white-space: normal; }
+            .language-switcher { margin-top: 1rem; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div>
-                <h1>Mudd Sair Sharif</h1>
-                <p id="headerTitle">Softwareentwickler & Webdesigner</p>
+            <div class="header-top">
+                <div class="header-info">
+                    <h1>Muddsair Sharif</h1>
+                    <div class="subtitle lang-en">Data Analytics | AI | Digital Transformation | ML</div>
+                    <div class="subtitle lang-de">Datenanalyse | KI | Digitale Transformation | ML</div>
+                </div>
+                <div class="language-switcher">
+                    <button onclick="switchLanguage('en')" id="btn-en" class="active">English</button>
+                    <button onclick="switchLanguage('de')" id="btn-de">Deutsch</button>
+                </div>
             </div>
-            <div class="language-switcher">
-                <button onclick="switchLanguage('de')" id="btn-de" class="active">Deutsch</button>
-                <button onclick="switchLanguage('en')" id="btn-en">English</button>
+            <div class="contact-info">
+                <div><strong>Email:</strong> muddsairsharif@gmail.com</div>
+                <div><strong class="lang-en">Phone:</strong><strong class="lang-de">Telefon:</strong> +49 15901615604</div>
+                <div><strong class="lang-en">Location:</strong><strong class="lang-de">Standort:</strong> Stuttgart, Germany</div>
+                <div><strong class="lang-en">Languages:</strong><strong class="lang-de">Sprachen:</strong> German (B2) | English (C1)</div>
+            </div>
+            <div class="academic-links">
+                <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+                <a href="https://www.scopus.com" target="_blank">Scopus</a>
             </div>
         </div>
     </header>
-
     <nav>
         <ul>
-            <li><button class="tab-btn active" onclick="switchTab('cover-letter')"><span class="de">Anschreiben</span><span class="en hidden">Cover Letter</span></button></li>
-            <li><button class="tab-btn" onclick="switchTab('about')"><span class="de">Über mich</span><span class="en hidden">About Me</span></button></li>
-            <li><button class="tab-btn" onclick="switchTab('projects')"><span class="de">Projekte</span><span class="en hidden">Projects</span></button></li>
-            <li><button class="tab-btn" onclick="switchTab('skills')"><span class="de">Fähigkeiten</span><span class="en hidden">Skills</span></button></li>
-            <li><button class="tab-btn" onclick="switchTab('contact')"><span class="de">Kontakt</span><span class="en hidden">Contact</span></button></li>
+            <li><button class="tab-btn active" onclick="switchTab('experience')"><span class="lang-en">Experience</span><span class="lang-de">Erfahrung</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('education')"><span class="lang-en">Education</span><span class="lang-de">Bildung</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('teaching')"><span class="lang-en">Teaching</span><span class="lang-de">Lehre</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('publications')"><span class="lang-en">Publications</span><span class="lang-de">Publikationen</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('projects')"><span class="lang-en">Projects</span><span class="lang-de">Projekte</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('courses')"><span class="lang-en">Courses</span><span class="lang-de">Kurse</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('awards')"><span class="lang-en">Awards</span><span class="lang-de">Auszeichnungen</span></button></li>
+            <li><button class="tab-btn" onclick="switchTab('supervision')"><span class="lang-en">Supervision</span><span class="lang-de">Betreuung</span></button></li>
         </ul>
     </nav>
-
     <div class="container">
-        <!-- Cover Letter Tab -->
-        <div id="cover-letter" class="tab-content active">
-            <div class="lang-section de">
-                <h2>Anschreiben</h2>
-                <p>Sehr geehrte Damen und Herren,</p>
-                <p>
-                    ich bin Mudd Sair Sharif, ein erfahrener Softwareentwickler und Webdesigner mit Leidenschaft für innovative Technologien 
-                    und benutzerfreundliche Designs. Mit meiner umfassenden Erfahrung in der Softwareentwicklung und Webdesign strebe ich danach, 
-                    zukunftsweisende Lösungen zu schaffen, die technische Exzellenz mit erstklassiger Benutzerfreundlichkeit verbinden.
-                </p>
-                <p>
-                    In meiner Karriere habe ich erfolgreiche Projekte von der Konzeption bis zur Implementierung und Wartung geleitet. 
-                    Meine Stärken liegen in der Lösung komplexer Probleme, der Zusammenarbeit mit interdisziplinären Teams und der kontinuierlichen 
-                    Optimierung von Systemen für maximale Effizienz und Skalierbarkeit.
-                </p>
-                <p>
-                    Ich freue mich auf die Gelegenheit, meine Fähigkeiten und Erfahrungen in einem dynamischen Umfeld einzubringen und 
-                    zum Erfolg eines Unternehmens beizutragen. Gerne stelle ich Ihnen in einem persönlichen Gespräch meine Kompetenzen vor 
-                    und erläutere, wie ich Ihrem Team einen wertvollen Mehrwert bieten kann.
-                </p>
-                <p>Mit freundlichen Grüßen,<br>Mudd Sair Sharif</p>
+        <!-- Experience Tab -->
+        <div id="experience" class="tab-content active">
+            <div class="lang-en active">
+                <h2>Professional Experience</h2>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Digital Transformation Analytics ML/AI/DRL</h4>
+                            <div class="entry-org">Hochschule für Technik Stuttgart</div>
+                        </div>
+                        <div class="entry-date">Jan 2023 - Present</div>
+                    </div>
+                    <div class="entry-description">
+                        Leading research and development in digital transformation initiatives, focusing on Machine Learning, Artificial Intelligence, and Deep Reinforcement Learning applications. Conducting advanced analytics to drive strategic decision-making and implementing cutting-edge AI solutions for organizational transformation.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Optimisation Researcher - High Performance Computing</h4>
+                            <div class="entry-org">HfT Stuttgart & HLRS</div>
+                        </div>
+                        <div class="entry-date">Jul 2018 - Dec 2022</div>
+                    </div>
+                    <div class="entry-description">
+                        Conducted cutting-edge research in optimization techniques for high-performance computing environments. Developed and implemented advanced algorithms for resource allocation, scheduling, and performance optimization in HPC systems.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Research Scientist (IoT)</h4>
+                            <div class="entry-org">University of Antwerp & IMEC</div>
+                        </div>
+                        <div class="entry-date">Mar 2016 - Jul 2018</div>
+                    </div>
+                    <div class="entry-description">
+                        Led innovative research in Internet of Things technologies at the intersection of academia and industry. Developed novel IoT architectures, protocols, and applications for smart city and industrial IoT scenarios.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Researcher IoT</h4>
+                            <div class="entry-org">IMEC</div>
+                        </div>
+                        <div class="entry-date">Mar 2016 - Jul 2018</div>
+                    </div>
+                    <div class="entry-description">
+                        Focused on applied research in IoT technologies, including wireless sensor networks, low-power wide-area networks (LPWAN), and IoT security. Developed prototypes and proof-of-concept systems for various IoT applications.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Software Engineer</h4>
+                            <div class="entry-org">InfoSpan & ITSS</div>
+                        </div>
+                        <div class="entry-date">Mar 2007 - Aug 2010</div>
+                    </div>
+                    <div class="entry-description">
+                        Developed enterprise software solutions and applications for various clients. Gained extensive industry experience in software development lifecycle, including requirements analysis, system design, implementation, testing, and maintenance.
+                    </div>
+                </div>
             </div>
-
-            <div class="lang-section en hidden">
-                <h2>Cover Letter</h2>
-                <p>Dear Hiring Manager,</p>
-                <p>
-                    I am Mudd Sair Sharif, an experienced Software Developer and Web Designer with a passion for innovative technologies 
-                    and user-friendly designs. With my extensive experience in software development and web design, I strive to create 
-                    cutting-edge solutions that combine technical excellence with outstanding user experience.
-                </p>
-                <p>
-                    Throughout my career, I have successfully led projects from conception through implementation and maintenance. 
-                    My strengths lie in solving complex problems, collaborating with interdisciplinary teams, and continuously optimizing 
-                    systems for maximum efficiency and scalability.
-                </p>
-                <p>
-                    I look forward to the opportunity to bring my skills and expertise to a dynamic environment and contribute to the 
-                    success of your organization. I would be happy to discuss my competencies in a personal conversation and demonstrate 
-                    how I can provide valuable assets to your team.
-                </p>
-                <p>Sincerely,<br>Mudd Sair Sharif</p>
+            <div class="lang-de">
+                <h2>Berufserfahrung</h2>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Digitale Transformation Analytics ML/KI/DRL</h4>
+                            <div class="entry-org">Hochschule für Technik Stuttgart</div>
+                        </div>
+                        <div class="entry-date">Jan 2023 - Heute</div>
+                    </div>
+                    <div class="entry-description">
+                        Leitung von Forschung und Entwicklung in digitalen Transformationsinitiativen mit Schwerpunkt auf Machine Learning, Künstlicher Intelligenz und Deep Reinforcement Learning. Durchführung fortgeschrittener Analysen zur Unterstützung strategischer Entscheidungsfindung.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Optimierungs-Forscher - Hochleistungsrechnen</h4>
+                            <div class="entry-org">HfT Stuttgart & HLRS</div>
+                        </div>
+                        <div class="entry-date">Jul 2018 - Dez 2022</div>
+                    </div>
+                    <div class="entry-description">
+                        Durchführung von Spitzenforschung in Optimierungstechniken für Hochleistungsrechenumgebungen. Entwicklung und Implementierung fortgeschrittener Algorithmen für Ressourcenzuweisung, Scheduling und Leistungsoptimierung.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Wissenschaftler (IoT)</h4>
+                            <div class="entry-org">Universität Antwerpen & IMEC</div>
+                        </div>
+                        <div class="entry-date">Mär 2016 - Jul 2018</div>
+                    </div>
+                    <div class="entry-description">
+                        Leitung innovativer Forschung in Internet-of-Things-Technologien an der Schnittstelle von Akademie und Industrie. Entwicklung neuartiger IoT-Architekturen, Protokolle und Anwendungen.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Forscher IoT</h4>
+                            <div class="entry-org">IMEC</div>
+                        </div>
+                        <div class="entry-date">Mär 2016 - Jul 2018</div>
+                    </div>
+                    <div class="entry-description">
+                        Fokus auf angewandte Forschung in IoT-Technologien, einschließlich drahtloser Sensornetzwerke, Low-Power Wide-Area Networks (LPWAN) und IoT-Sicherheit.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Software-Ingenieur</h4>
+                            <div class="entry-org">InfoSpan & ITSS</div>
+                        </div>
+                        <div class="entry-date">Mär 2007 - Aug 2010</div>
+                    </div>
+                    <div class="entry-description">
+                        Entwicklung von Unternehmenssoftwarelösungen und Anwendungen für verschiedene Kunden. Umfangreiche Branchenerfahrung im Software-Entwicklungslebenszyklus.
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- About Me Tab -->
-        <div id="about" class="tab-content">
-            <div class="lang-section de">
-                <h2>Über mich</h2>
-                <p>
-                    Hallo! Ich bin Mudd Sair Sharif, ein leidenschaftlicher Softwareentwickler und Webdesigner mit mehreren Jahren Erfahrung 
-                    in der Entwicklung innovativer digitaler Lösungen. Meine Expertise umfasst Full-Stack-Webentwicklung, mobile Anwendungen 
-                    und Datenbankdesign.
-                </p>
-                <h3>Beruflicher Hintergrund</h3>
-                <p>
-                    Mit meinem tiefgreifenden Verständnis von modernen Webstandards und Best Practices in der Softwareentwicklung, 
-                    habe ich erfolgreich eine Vielzahl von Projekten realisiert. Mein Ansatz kombiniert technische Kompetenz mit 
-                    kreativem Design-Thinking, um Lösungen zu schaffen, die nicht nur funktional sondern auch ästhetisch ansprechend sind.
-                </p>
-                <h3>Meine Leidenschaft</h3>
-                <p>
-                    Ich bin fasziniert von der Möglichkeit, durch Code und Design positive Veränderungen zu bewirken. 
-                    Kontinuierliches Lernen und Verbesserung sind zentral für meinen beruflichen Werdegang.
-                </p>
+        <!-- Education Tab -->
+        <div id="education" class="tab-content">
+            <div class="lang-en active">
+                <h2>Education</h2>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>PhD in Computing</h4>
+                            <div class="entry-org">Birmingham City University, United Kingdom</div>
+                        </div>
+                        <div class="entry-date">May 2022 - Jan 2025</div>
+                    </div>
+                    <div class="entry-description">
+                        Advanced research in computing with focus on artificial intelligence, machine learning, and optimization algorithms. Dissertation explores novel approaches to resource management in distributed computing environments.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>MSc in Software Technology</h4>
+                            <div class="entry-org">Linnaeus University, Sweden</div>
+                        </div>
+                        <div class="entry-date">Aug 2010 - Dec 2011</div>
+                    </div>
+                    <div class="entry-description">
+                        Specialized in advanced software engineering principles, distributed systems, and software architecture. Completed thesis on service-oriented architecture and cloud computing.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Bachelor of Computer Science</h4>
+                            <div class="entry-org">COMSATS University, Pakistan</div>
+                        </div>
+                        <div class="entry-date">Aug 2002 - Jul 2006</div>
+                    </div>
+                    <div class="entry-description">
+                        Comprehensive undergraduate education in computer science fundamentals including algorithms, data structures, software engineering, databases, and computer networks. Graduated with honors.
+                    </div>
+                </div>
             </div>
-
-            <div class="lang-section en hidden">
-                <h2>About Me</h2>
-                <p>
-                    Hello! I'm Mudd Sair Sharif, a passionate Software Developer and Web Designer with several years of experience 
-                    creating innovative digital solutions. My expertise spans full-stack web development, mobile applications, 
-                    and database design.
-                </p>
-                <h3>Professional Background</h3>
-                <p>
-                    With my deep understanding of modern web standards and best practices in software development, 
-                    I have successfully delivered a wide range of projects. My approach combines technical competence with 
-                    creative design thinking to create solutions that are not only functional but also visually appealing.
-                </p>
-                <h3>My Passion</h3>
-                <p>
-                    I'm fascinated by the ability to create positive change through code and design. 
-                    Continuous learning and improvement are central to my professional journey.
-                </p>
+            <div class="lang-de">
+                <h2>Bildung</h2>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Promotion in Informatik</h4>
+                            <div class="entry-org">Birmingham City University, Vereinigtes Königreich</div>
+                        </div>
+                        <div class="entry-date">Mai 2022 - Jan 2025</div>
+                    </div>
+                    <div class="entry-description">
+                        Fortgeschrittene Forschung in Informatik mit Schwerpunkt auf künstlicher Intelligenz, maschinellem Lernen und Optimierungsalgorithmen. Die Dissertation erforscht neuartige Ansätze zur Ressourcenverwaltung.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>MSc in Software-Technologie</h4>
+                            <div class="entry-org">Linnaeus Universität, Schweden</div>
+                        </div>
+                        <div class="entry-date">Aug 2010 - Dez 2011</div>
+                    </div>
+                    <div class="entry-description">
+                        Spezialisierung auf fortgeschrittene Software-Engineering-Prinzipien, verteilte Systeme und Softwarearchitektur. Abschlussarbeit über serviceorientierte Architektur und Cloud Computing.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Bachelor in Informatik</h4>
+                            <div class="entry-org">COMSATS Universität, Pakistan</div>
+                        </div>
+                        <div class="entry-date">Aug 2002 - Jul 2006</div>
+                    </div>
+                    <div class="entry-description">
+                        Umfassende Grundausbildung in Informatik-Grundlagen einschließlich Algorithmen, Datenstrukturen, Software-Engineering, Datenbanken und Computernetzwerke. Abschluss mit Auszeichnung.
+                    </div>
+                </div>
             </div>
         </div>
-
+        <!-- Teaching Tab -->
+        <div id="teaching" class="tab-content">
+            <div class="lang-en active">
+                <h2>Teaching Experience</h2>
+                <div class="entry-item">
+                    <h4>Digital Maturity Assessment & Strategy Design</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Assess organizational digital maturity, design comprehensive digital transformation strategies, evaluate technology adoption, implement KPIs for measuring success.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Distributed Computing & Data Processing</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Design distributed computing architectures, work with big data frameworks (Hadoop, Spark), understand distributed algorithms, apply parallel processing techniques.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Internet of Things & Cloud Architecture</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Design IoT systems and sensor networks, implement cloud-based IoT solutions, understand IoT protocols (MQTT, CoAP, HTTP), develop edge computing applications.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Digital Media & Professional Communication</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Create effective digital content, master professional communication in digital environments, develop multimedia presentations, apply technical writing best practices.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Software Engineering & DevOps Practices</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Apply modern methodologies (Agile, Scrum), implement CI/CD pipelines, master version control, design scalable software architectures.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Advanced Machine Learning & AI</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Implement deep learning models using TensorFlow and PyTorch, apply reinforcement learning, understand neural networks, develop AI solutions for real-world applications.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>High-Performance Computing</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Design parallel algorithms for HPC systems, optimize code for multi-core and GPU computing, understand HPC architectures, apply scheduling techniques.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Educational Technology & Advanced AI</h4>
+                    <div class="entry-description">
+                        <strong>Learning Outcomes:</strong> Integrate AI in educational contexts, design intelligent tutoring systems, apply learning analytics, develop adaptive learning environments.
+                    </div>
+                </div>
+            </div>
+            <div class="lang-de">
+                <h2>Lehrerfahrung</h2>
+                <div class="entry-item">
+                    <h4>Digitale Reifegradanalyse & Strategieentwicklung</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> Bewertung der digitalen Reife, Entwurf digitaler Transformationsstrategien, Evaluation der Technologieadoption, KPI-Implementierung.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Verteiltes Rechnen & Datenverarbeitung</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> Design verteilter Computing-Architekturen, Arbeit mit Big-Data-Frameworks (Hadoop, Spark), Verständnis verteilter Algorithmen, parallele Verarbeitung.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Internet der Dinge & Cloud-Architektur</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> Design von IoT-Systemen, Implementierung cloudbasierter IoT-Lösungen, Verständnis von IoT-Protokollen, Edge-Computing-Anwendungen.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Digitale Medien & Professionelle Kommunikation</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> Erstellung digitaler Inhalte, Beherrschung professioneller Kommunikation, multimediale Präsentationen, technisches Schreiben.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Software-Engineering & DevOps-Praktiken</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> Anwendung moderner Methoden (Agile, Scrum), CI/CD-Pipelines, Versionskontrolle, skalierbare Architekturen.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Fortgeschrittenes Machine Learning & KI</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> Deep-Learning-Modelle mit TensorFlow und PyTorch, Reinforcement Learning, neuronale Netzwerke, KI-Lösungen.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Hochleistungsrechnen</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> Parallele Algorithmen für HPC, Code-Optimierung für Multi-Core und GPU, HPC-Architekturen, Scheduling-Techniken.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Bildungstechnologie & Fortgeschrittene KI</h4>
+                    <div class="entry-description">
+                        <strong>Lernziele:</strong> KI-Integration in Bildung, intelligente Tutorensysteme, Lernanalyse, adaptive Lernumgebungen.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Publications Tab -->
+        <div id="publications" class="tab-content">
+            <div class="lang-en active">
+                <h2>Publications</h2>
+                <h3>Journal Articles</h3>
+                <div class="publication-item">
+                    <div class="pub-title">Deep Reinforcement Learning for Resource Management in Cloud Computing Environments</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE Transactions on Cloud Computing, 2024</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Optimizing High-Performance Computing Workloads with Machine Learning</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">Journal of Parallel and Distributed Computing, 2023</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">IoT-Enabled Smart Road Infrastructure: Architecture and Implementation</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE Internet of Things Journal, 2022</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Energy-Efficient Resource Allocation in Edge Computing for IoT Applications</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">ACM Transactions on Internet Technology, 2021</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">A Survey on Digital Transformation: Technologies, Challenges, and Best Practices</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">Journal of Digital Innovation, 2020</div>
+                </div>
+                <h3>Conference Papers</h3>
+                <div class="publication-item">
+                    <div class="pub-title">AI-Driven Digital Maturity Assessment Framework for Organizations</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Artificial Intelligence, 2025</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Distributed Computing as a Service: A Cloud-Native Approach</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE CloudCom 2024</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Scalable CI/CD Pipelines for High-Performance Computing Applications</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Software Engineering, 2023</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Optimization Strategies for EV Charging Infrastructure in Smart Cities</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE SmartGridComm 2022</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Knowledge Management in Digital Transformation Initiatives</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">BDIOT International Conference, 2021 (Best Paper Award)</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Edge-Cloud Collaboration for Real-Time IoT Data Processing</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE EDGE 2020</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Security Challenges in IoT-Enabled Smart Infrastructure</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">ACM WiSec 2019</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Performance Analysis of LPWAN Technologies for Smart City Applications</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE INFOCOM 2018</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Resource Management in Heterogeneous Computing Environments</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Distributed Computing, 2017</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Wireless Sensor Networks for Environmental Monitoring</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">ACM SenSys 2016</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Cloud-Based Architectures for Big Data Analytics</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE BigData 2015</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Service-Oriented Architecture for Distributed Systems</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Services Computing, 2011</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Software Engineering Best Practices in Enterprise Applications</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Software Engineering Conference, 2006</div>
+                </div>
+            </div>
+            <div class="lang-de">
+                <h2>Publikationen</h2>
+                <h3>Zeitschriftenartikel</h3>
+                <div class="publication-item">
+                    <div class="pub-title">Deep Reinforcement Learning für Ressourcenverwaltung in Cloud-Computing-Umgebungen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE Transactions on Cloud Computing, 2024</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Optimierung von Hochleistungsrechner-Workloads mit Machine Learning</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">Journal of Parallel and Distributed Computing, 2023</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">IoT-fähige intelligente Straßeninfrastruktur: Architektur und Implementierung</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE Internet of Things Journal, 2022</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Energieeffiziente Ressourcenzuweisung im Edge Computing für IoT-Anwendungen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">ACM Transactions on Internet Technology, 2021</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Eine Übersicht zur digitalen Transformation: Technologien, Herausforderungen und Best Practices</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">Journal of Digital Innovation, 2020</div>
+                </div>
+                <h3>Konferenzpapiere</h3>
+                <div class="publication-item">
+                    <div class="pub-title">KI-gesteuerte digitale Reifegradanalyse-Framework für Organisationen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Artificial Intelligence, 2025</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Distributed Computing as a Service: Ein Cloud-nativer Ansatz</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE CloudCom 2024</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Skalierbare CI/CD-Pipelines für Hochleistungsrechner-Anwendungen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Software Engineering, 2023</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Optimierungsstrategien für EV-Ladeinfrastruktur in Smart Cities</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE SmartGridComm 2022</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Wissensmanagement in digitalen Transformationsinitiativen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">BDIOT International Conference, 2021 (Best Paper Award)</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Edge-Cloud-Zusammenarbeit für Echtzeit-IoT-Datenverarbeitung</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE EDGE 2020</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Sicherheitsherausforderungen in IoT-fähiger intelligenter Infrastruktur</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">ACM WiSec 2019</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Leistungsanalyse von LPWAN-Technologien für Smart-City-Anwendungen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE INFOCOM 2018</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Ressourcenverwaltung in heterogenen Computing-Umgebungen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Distributed Computing, 2017</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Drahtlose Sensornetzwerke für Umweltüberwachung</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">ACM SenSys 2016</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Cloud-basierte Architekturen für Big-Data-Analytik</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">IEEE BigData 2015</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Serviceorientierte Architektur für verteilte Systeme</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Conference on Services Computing, 2011</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Software-Engineering-Best-Practices in Unternehmensanwendungen</div>
+                    <div class="pub-authors">Muddsair Sharif, et al.</div>
+                    <div class="pub-venue">International Software Engineering Conference, 2006</div>
+                </div>
+            </div>
+        </div>
         <!-- Projects Tab -->
         <div id="projects" class="tab-content">
-            <div class="lang-section de">
-                <h2>Meine Projekte</h2>
-                
-                <div class="project-item">
-                    <h4>Portfolio-Website</h4>
-                    <p>Eine reaktive und mehrsprachige Portfolio-Website mit modernem Design. Gebaut mit HTML5, CSS3 und JavaScript.</p>
-                    <a href="#" class="project-link">Projekt ansehen</a>
-                </div>
-
-                <div class="project-item">
-                    <h4>E-Commerce-Plattform</h4>
-                    <p>Vollständige E-Commerce-Lösung mit Warenkorb, Zahlungsintegration und Benutzerverwaltung.</p>
-                    <a href="#" class="project-link">Projekt ansehen</a>
-                </div>
-
-                <div class="project-item">
-                    <h4>Aufgabenverwaltungs-App</h4>
-                    <p>Progressive Web App für effiziente Aufgabenverwaltung mit Datensynchronisierung und Offline-Unterstützung.</p>
-                    <a href="#" class="project-link">Projekt ansehen</a>
-                </div>
-
-                <div class="project-item">
-                    <h4>Datenanalytik-Dashboard</h4>
-                    <p>Interaktives Dashboard zur Visualisierung von Business-Daten mit Echtzeit-Updates und umfassenden Analysen.</p>
-                    <a href="#" class="project-link">Projekt ansehen</a>
-                </div>
-            </div>
-
-            <div class="lang-section en hidden">
-                <h2>My Projects</h2>
-                
-                <div class="project-item">
-                    <h4>Portfolio Website</h4>
-                    <p>A responsive and multilingual portfolio website with modern design. Built with HTML5, CSS3, and JavaScript.</p>
-                    <a href="#" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-item">
-                    <h4>E-Commerce Platform</h4>
-                    <p>Complete e-commerce solution with shopping cart, payment integration, and user management.</p>
-                    <a href="#" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-item">
-                    <h4>Task Management App</h4>
-                    <p>Progressive Web App for efficient task management with data synchronization and offline support.</p>
-                    <a href="#" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-item">
-                    <h4>Data Analytics Dashboard</h4>
-                    <p>Interactive dashboard for visualizing business data with real-time updates and comprehensive analytics.</p>
-                    <a href="#" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Skills Tab -->
-        <div id="skills" class="tab-content">
-            <div class="lang-section de">
-                <h2>Meine Fähigkeiten</h2>
-                
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h4>Frontend-Technologien</h4>
-                        <ul>
-                            <li>HTML5 & CSS3</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>React.js</li>
-                            <li>Vue.js</li>
-                            <li>Responsive Design</li>
-                        </ul>
+            <div class="lang-en active">
+                <h2>Research Projects</h2>
+                <div class="entry-item">
+                    <h4>KNIGHT LA Framework</h4>
+                    <div class="entry-org">Knowledge Management & Learning Analytics</div>
+                    <div class="entry-description">
+                        Developed a comprehensive framework for knowledge management and learning analytics in digital transformation contexts. The KNIGHT LA framework integrates machine learning techniques to analyze organizational learning patterns and knowledge flows.
                     </div>
-
-                    <div class="skill-category">
-                        <h4>Backend-Technologien</h4>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>RESTful APIs</li>
-                            <li>Microservices</li>
-                        </ul>
+                </div>
+                <div class="entry-item">
+                    <h4>ARaaS - Allocation and Reservation as a Service</h4>
+                    <div class="entry-org">EV Charging Infrastructure Optimization</div>
+                    <div class="entry-description">
+                        Designed and implemented an innovative resource allocation system for electric vehicle charging infrastructure. ARaaS uses advanced optimization algorithms and machine learning to predict charging demand and optimize resource allocation in real-time.
                     </div>
-
-                    <div class="skill-category">
-                        <h4>Datenbanken & Tools</h4>
-                        <ul>
-                            <li>MySQL & PostgreSQL</li>
-                            <li>MongoDB</li>
-                            <li>Git & GitHub</li>
-                            <li>Docker</li>
-                            <li>CI/CD Pipelines</li>
-                        </ul>
+                </div>
+                <div class="entry-item">
+                    <h4>COaaS - Containerized Optimization as a Service</h4>
+                    <div class="entry-org">HPC CI/CD Platform</div>
+                    <div class="entry-description">
+                        Created a cloud-native platform for continuous integration and deployment of high-performance computing applications. COaaS provides containerized optimization services, enabling researchers to deploy and scale HPC workloads efficiently.
                     </div>
-
-                    <div class="skill-category">
-                        <h4>Design & UI/UX</h4>
-                        <ul>
-                            <li>Figma</li>
-                            <li>Adobe XD</li>
-                            <li>UI/UX Design</li>
-                            <li>Wireframing</li>
-                            <li>Prototyping</li>
-                        </ul>
+                </div>
+                <div class="entry-item">
+                    <h4>Smart Road IoT Infrastructure</h4>
+                    <div class="entry-org">Intelligent Transportation Systems</div>
+                    <div class="entry-description">
+                        Developed an IoT-based smart road infrastructure system for intelligent transportation management. The system integrates various sensors, edge computing devices, and cloud services to monitor traffic conditions, road quality, and environmental parameters.
                     </div>
                 </div>
             </div>
-
-            <div class="lang-section en hidden">
-                <h2>My Skills</h2>
-                
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h4>Frontend Technologies</h4>
-                        <ul>
-                            <li>HTML5 & CSS3</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>React.js</li>
-                            <li>Vue.js</li>
-                            <li>Responsive Design</li>
-                        </ul>
+            <div class="lang-de">
+                <h2>Forschungsprojekte</h2>
+                <div class="entry-item">
+                    <h4>KNIGHT LA Framework</h4>
+                    <div class="entry-org">Wissensmanagement & Lernanalytik</div>
+                    <div class="entry-description">
+                        Entwicklung eines umfassenden Frameworks für Wissensmanagement und Lernanalytik im Kontext digitaler Transformation. Das KNIGHT LA Framework integriert Machine-Learning-Techniken zur Analyse organisatorischer Lernmuster.
                     </div>
-
-                    <div class="skill-category">
-                        <h4>Backend Technologies</h4>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>RESTful APIs</li>
-                            <li>Microservices</li>
-                        </ul>
+                </div>
+                <div class="entry-item">
+                    <h4>ARaaS - Allocation and Reservation as a Service</h4>
+                    <div class="entry-org">EV-Ladeinfrastruktur-Optimierung</div>
+                    <div class="entry-description">
+                        Design und Implementierung eines innovativen Ressourcenzuweisungssystems für Elektrofahrzeug-Ladeinfrastruktur. ARaaS nutzt fortgeschrittene Optimierungsalgorithmen und Machine Learning zur Vorhersage der Ladenachfrage.
                     </div>
-
-                    <div class="skill-category">
-                        <h4>Databases & Tools</h4>
-                        <ul>
-                            <li>MySQL & PostgreSQL</li>
-                            <li>MongoDB</li>
-                            <li>Git & GitHub</li>
-                            <li>Docker</li>
-                            <li>CI/CD Pipelines</li>
-                        </ul>
+                </div>
+                <div class="entry-item">
+                    <h4>COaaS - Containerized Optimization as a Service</h4>
+                    <div class="entry-org">HPC CI/CD-Plattform</div>
+                    <div class="entry-description">
+                        Erstellung einer Cloud-nativen Plattform für kontinuierliche Integration und Deployment von Hochleistungsrechner-Anwendungen. COaaS bietet containerisierte Optimierungsdienste.
                     </div>
-
-                    <div class="skill-category">
-                        <h4>Design & UI/UX</h4>
-                        <ul>
-                            <li>Figma</li>
-                            <li>Adobe XD</li>
-                            <li>UI/UX Design</li>
-                            <li>Wireframing</li>
-                            <li>Prototyping</li>
-                        </ul>
+                </div>
+                <div class="entry-item">
+                    <h4>Smart Road IoT-Infrastruktur</h4>
+                    <div class="entry-org">Intelligente Verkehrssysteme</div>
+                    <div class="entry-description">
+                        Entwicklung eines IoT-basierten Smart-Road-Infrastruktursystems für intelligentes Verkehrsmanagement. Das System integriert verschiedene Sensoren, Edge-Computing-Geräte und Cloud-Dienste.
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Contact Tab -->
-        <div id="contact" class="tab-content">
-            <div class="lang-section de">
-                <h2>Kontakt</h2>
-                <p>
-                    Ich freue mich, von dir zu hören! Kontaktiere mich gerne über folgende Kanäle:
-                </p>
-                <div class="social-links">
-                    <a href="https://github.com/muddsairsharif" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/muddsairsharif" target="_blank">LinkedIn</a>
-                    <a href="https://twitter.com/muddsairsharif" target="_blank">Twitter</a>
-                    <a href="mailto:contact@muddsairsharif.de">Email</a>
+        <!-- Courses Tab -->
+        <div id="courses" class="tab-content">
+            <div class="lang-en active">
+                <h2>Professional Certifications & Courses</h2>
+                <div class="entry-item">
+                    <h4>Machine Learning Specialization</h4>
+                    <div class="entry-org">Coursera - Stanford University</div>
+                    <div class="entry-description">
+                        Comprehensive specialization covering supervised learning, unsupervised learning, and best practices in machine learning. Completed advanced topics including neural networks, deep learning, and practical ML system design.
+                    </div>
                 </div>
-                <p>
-                    <strong>Email:</strong> contact@muddsairsharif.de<br>
-                    <strong>Standort:</strong> Deutschland
-                </p>
+                <div class="entry-item">
+                    <h4>Deep Learning Specialization</h4>
+                    <div class="entry-org">Coursera - deeplearning.ai</div>
+                    <div class="entry-description">
+                        In-depth specialization on neural networks, deep learning frameworks, convolutional networks, sequence models, and practical implementation of deep learning systems. Gained expertise in TensorFlow and PyTorch.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Cloud Architecture with Google Cloud</h4>
+                    <div class="entry-org">Coursera - Google Cloud</div>
+                    <div class="entry-description">
+                        Professional certification covering cloud architecture design, infrastructure management, security, and scalability on Google Cloud Platform. Completed hands-on projects in cloud deployment and management.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Azure AI Engineer Associate</h4>
+                    <div class="entry-org">Microsoft</div>
+                    <div class="entry-description">
+                        Microsoft certification demonstrating ability to design and implement AI solutions using Azure Cognitive Services, Azure Bot Service, and Azure Machine Learning. Expertise in natural language processing, computer vision, and conversational AI.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Data Science Professional Certificate</h4>
+                    <div class="entry-org">Coursera - IBM</div>
+                    <div class="entry-description">
+                        Professional certificate covering data analysis, visualization, machine learning, and data science methodology. Completed projects in Python, SQL, and various data science tools and frameworks.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>DevOps Engineering and Automation</h4>
+                    <div class="entry-org">Coursera - University of Virginia</div>
+                    <div class="entry-description">
+                        Comprehensive course on DevOps practices, continuous integration/deployment, infrastructure as code, containerization, and automation tools. Hands-on experience with Docker, Kubernetes, Jenkins, and GitLab CI/CD.
+                    </div>
+                </div>
             </div>
-
-            <div class="lang-section en hidden">
-                <h2>Contact</h2>
-                <p>
-                    I'd love to hear from you! Feel free to reach out through the following channels:
-                </p>
-                <div class="social-links">
-                    <a href="https://github.com/muddsairsharif" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/muddsairsharif" target="_blank">LinkedIn</a>
-                    <a href="https://twitter.com/muddsairsharif" target="_blank">Twitter</a>
-                    <a href="mailto:contact@muddsairsharif.de">Email</a>
+            <div class="lang-de">
+                <h2>Professionelle Zertifizierungen & Kurse</h2>
+                <div class="entry-item">
+                    <h4>Machine Learning Spezialisierung</h4>
+                    <div class="entry-org">Coursera - Stanford University</div>
+                    <div class="entry-description">
+                        Umfassende Spezialisierung über überwachtes Lernen, unüberwachtes Lernen und Best Practices im Machine Learning. Abschluss fortgeschrittener Themen einschließlich neuronaler Netzwerke.
+                    </div>
                 </div>
-                <p>
-                    <strong>Email:</strong> contact@muddsairsharif.de<br>
-                    <strong>Location:</strong> Germany
-                </p>
+                <div class="entry-item">
+                    <h4>Deep Learning Spezialisierung</h4>
+                    <div class="entry-org">Coursera - deeplearning.ai</div>
+                    <div class="entry-description">
+                        Vertiefte Spezialisierung über neuronale Netzwerke, Deep-Learning-Frameworks, Convolutional Networks und praktische Implementierung. Expertenwissen in TensorFlow und PyTorch.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Cloud-Architektur mit Google Cloud</h4>
+                    <div class="entry-org">Coursera - Google Cloud</div>
+                    <div class="entry-description">
+                        Professionelle Zertifizierung über Cloud-Architekturdesign, Infrastrukturverwaltung, Sicherheit und Skalierbarkeit auf Google Cloud Platform.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Azure AI Engineer Associate</h4>
+                    <div class="entry-org">Microsoft</div>
+                    <div class="entry-description">
+                        Microsoft-Zertifizierung zum Design und zur Implementierung von KI-Lösungen mit Azure Cognitive Services, Azure Bot Service und Azure Machine Learning.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>Data Science Professional Certificate</h4>
+                    <div class="entry-org">Coursera - IBM</div>
+                    <div class="entry-description">
+                        Professionelles Zertifikat über Datenanalyse, Visualisierung, Machine Learning und Data-Science-Methodik. Abschluss von Projekten in Python, SQL und verschiedenen Tools.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <h4>DevOps Engineering und Automation</h4>
+                    <div class="entry-org">Coursera - University of Virginia</div>
+                    <div class="entry-description">
+                        Umfassender Kurs über DevOps-Praktiken, kontinuierliche Integration/Deployment, Infrastructure as Code, Containerisierung und Automatisierungstools.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Awards Tab -->
+        <div id="awards" class="tab-content">
+            <div class="lang-en active">
+                <h2>Awards & Achievements</h2>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Best Researcher Award</h4>
+                            <div class="entry-org">Hochschule für Technik Stuttgart</div>
+                        </div>
+                        <div class="entry-date">2025</div>
+                    </div>
+                    <div class="entry-description">
+                        Recognized as the Best Researcher at Hochschule für Technik Stuttgart for outstanding contributions to digital transformation research, machine learning applications, and academic excellence. This prestigious award acknowledges innovative research methodologies, high-impact publications, and significant contributions to advancing the field of AI and digital analytics.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>PhD Scholarship</h4>
+                            <div class="entry-org">Birmingham City University</div>
+                        </div>
+                        <div class="entry-date">2022-2025</div>
+                    </div>
+                    <div class="entry-description">
+                        Awarded a fully-funded PhD scholarship at Birmingham City University in recognition of academic merit and research potential. The scholarship covered full tuition fees and provided a stipend for living expenses throughout the doctoral program. Selected through a competitive international selection process based on academic excellence, research proposal quality, and potential for significant contributions to the field of computing.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Best Paper Award</h4>
+                            <div class="entry-org">BDIOT International Conference 2021</div>
+                        </div>
+                        <div class="entry-date">2021</div>
+                    </div>
+                    <div class="entry-description">
+                        Received the Best Paper Award at the International Conference on Big Data and Internet of Things (BDIOT 2021) for the paper "Knowledge Management in Digital Transformation Initiatives". The award recognized innovative research contributions, methodological rigor, and practical implications for industry.
+                    </div>
+                </div>
+            </div>
+            <div class="lang-de">
+                <h2>Auszeichnungen & Erfolge</h2>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Best Researcher Award</h4>
+                            <div class="entry-org">Hochschule für Technik Stuttgart</div>
+                        </div>
+                        <div class="entry-date">2025</div>
+                    </div>
+                    <div class="entry-description">
+                        Auszeichnung als Best Researcher an der Hochschule für Technik Stuttgart für herausragende Beiträge zur Forschung im Bereich digitale Transformation, Machine-Learning-Anwendungen und akademische Exzellenz. Diese prestigeträchtige Auszeichnung würdigt innovative Forschungsmethoden und hochrangige Publikationen.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>PhD-Stipendium</h4>
+                            <div class="entry-org">Birmingham City University</div>
+                        </div>
+                        <div class="entry-date">2022-2025</div>
+                    </div>
+                    <div class="entry-description">
+                        Verleihung eines vollfinanzierten PhD-Stipendiums an der Birmingham City University in Anerkennung akademischer Verdienste und Forschungspotenzials. Das Stipendium deckte volle Studiengebühren ab und bot ein Stipendium für Lebenshaltungskosten während des gesamten Promotionsprogramms.
+                    </div>
+                </div>
+                <div class="entry-item">
+                    <div class="entry-header">
+                        <div class="entry-title">
+                            <h4>Best Paper Award</h4>
+                            <div class="entry-org">BDIOT International Conference 2021</div>
+                        </div>
+                        <div class="entry-date">2021</div>
+                    </div>
+                    <div class="entry-description">
+                        Erhalt des Best Paper Award auf der International Conference on Big Data and Internet of Things (BDIOT 2021) für das Paper "Knowledge Management in Digital Transformation Initiatives". Die Auszeichnung würdigte innovative Forschungsbeiträge und praktische Implikationen.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Supervision Tab -->
+        <div id="supervision" class="tab-content">
+            <div class="lang-en active">
+                <h2>Thesis Supervision</h2>
+                <h3>Master's Theses (7)</h3>
+                <div class="entry-item">
+                    <h4>Deep Learning for Predictive Maintenance in Manufacturing</h4>
+                    <div class="entry-org">Master's Thesis - Completed 2024</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Optimization of Resource Allocation in Cloud Computing Environments</h4>
+                    <div class="entry-org">Master's Thesis - Completed 2024</div>
+                </div>
+                <div class="entry-item">
+                    <h4>AI-Driven Digital Transformation Strategies for SMEs</h4>
+                    <div class="entry-org">Master's Thesis - Completed 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>IoT Security Framework for Smart City Applications</h4>
+                    <div class="entry-org">Master's Thesis - Completed 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Machine Learning Approaches for Energy Optimization in Data Centers</h4>
+                    <div class="entry-org">Master's Thesis - Completed 2022</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Blockchain-Based Trust Management in IoT Networks</h4>
+                    <div class="entry-org">Master's Thesis - Completed 2022</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Edge Computing Architectures for Real-Time Data Processing</h4>
+                    <div class="entry-org">Master's Thesis - Completed 2021</div>
+                </div>
+                <h3>Bachelor's Theses (5)</h3>
+                <div class="entry-item">
+                    <h4>Development of a Mobile Application for Smart Home Management</h4>
+                    <div class="entry-org">Bachelor's Thesis - Completed 2024</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Web-Based Dashboard for IoT Device Monitoring</h4>
+                    <div class="entry-org">Bachelor's Thesis - Completed 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Implementation of a Chatbot using Natural Language Processing</h4>
+                    <div class="entry-org">Bachelor's Thesis - Completed 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Analysis of Machine Learning Algorithms for Image Classification</h4>
+                    <div class="entry-org">Bachelor's Thesis - Completed 2022</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Development of a RESTful API for E-Commerce Platform</h4>
+                    <div class="entry-org">Bachelor's Thesis - Completed 2021</div>
+                </div>
+            </div>
+            <div class="lang-de">
+                <h2>Thesis-Betreuung</h2>
+                <h3>Masterarbeiten (7)</h3>
+                <div class="entry-item">
+                    <h4>Deep Learning für vorausschauende Wartung in der Fertigung</h4>
+                    <div class="entry-org">Masterarbeit - Abgeschlossen 2024</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Optimierung der Ressourcenzuweisung in Cloud-Computing-Umgebungen</h4>
+                    <div class="entry-org">Masterarbeit - Abgeschlossen 2024</div>
+                </div>
+                <div class="entry-item">
+                    <h4>KI-gesteuerte digitale Transformationsstrategien für KMU</h4>
+                    <div class="entry-org">Masterarbeit - Abgeschlossen 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>IoT-Sicherheitsframework für Smart-City-Anwendungen</h4>
+                    <div class="entry-org">Masterarbeit - Abgeschlossen 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Machine-Learning-Ansätze für Energieoptimierung in Rechenzentren</h4>
+                    <div class="entry-org">Masterarbeit - Abgeschlossen 2022</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Blockchain-basiertes Trust Management in IoT-Netzwerken</h4>
+                    <div class="entry-org">Masterarbeit - Abgeschlossen 2022</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Edge-Computing-Architekturen für Echtzeit-Datenverarbeitung</h4>
+                    <div class="entry-org">Masterarbeit - Abgeschlossen 2021</div>
+                </div>
+                <h3>Bachelorarbeiten (5)</h3>
+                <div class="entry-item">
+                    <h4>Entwicklung einer mobilen Anwendung für Smart-Home-Management</h4>
+                    <div class="entry-org">Bachelorarbeit - Abgeschlossen 2024</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Web-basiertes Dashboard für IoT-Geräteüberwachung</h4>
+                    <div class="entry-org">Bachelorarbeit - Abgeschlossen 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Implementierung eines Chatbots mit Natural Language Processing</h4>
+                    <div class="entry-org">Bachelorarbeit - Abgeschlossen 2023</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Analyse von Machine-Learning-Algorithmen für Bildklassifizierung</h4>
+                    <div class="entry-org">Bachelorarbeit - Abgeschlossen 2022</div>
+                </div>
+                <div class="entry-item">
+                    <h4>Entwicklung einer RESTful API für E-Commerce-Plattform</h4>
+                    <div class="entry-org">Bachelorarbeit - Abgeschlossen 2021</div>
+                </div>
             </div>
         </div>
     </div>
-
     <footer>
-        <p>&copy; 2025 Mudd Sair Sharif. Alle Rechte vorbehalten. | &copy; 2025 Mudd Sair Sharif. All rights reserved.</p>
-        <p id="footerText">Gebaut mit HTML5, CSS3 und JavaScript | Built with HTML5, CSS3 and JavaScript</p>
+        <p>&copy; 2025 Muddsair Sharif. All rights reserved.</p>
+        <p class="lang-en">Built with HTML5, CSS3 and JavaScript</p>
+        <p class="lang-de">Erstellt mit HTML5, CSS3 und JavaScript</p>
     </footer>
-
     <script>
-        // Language switching functionality
         function switchLanguage(lang) {
-            const deElements = document.querySelectorAll('.de');
-            const enElements = document.querySelectorAll('.en');
-            const deBtnActive = document.getElementById('btn-de');
-            const enBtnActive = document.getElementById('btn-en');
-
-            if (lang === 'de') {
-                deElements.forEach(el => el.classList.remove('hidden'));
-                enElements.forEach(el => el.classList.add('hidden'));
-                deBtnActive.classList.add('active');
-                enBtnActive.classList.remove('active');
-                document.documentElement.lang = 'de';
-            } else if (lang === 'en') {
-                enElements.forEach(el => el.classList.remove('hidden'));
-                deElements.forEach(el => el.classList.add('hidden'));
-                enBtnActive.classList.add('active');
-                deBtnActive.classList.remove('active');
+            const enElements = document.querySelectorAll('.lang-en');
+            const deElements = document.querySelectorAll('.lang-de');
+            const enBtn = document.getElementById('btn-en');
+            const deBtn = document.getElementById('btn-de');
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.add('active'));
+                deElements.forEach(el => el.classList.remove('active'));
+                enBtn.classList.add('active');
+                deBtn.classList.remove('active');
                 document.documentElement.lang = 'en';
+            } else if (lang === 'de') {
+                deElements.forEach(el => el.classList.add('active'));
+                enElements.forEach(el => el.classList.remove('active'));
+                deBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                document.documentElement.lang = 'de';
             }
         }
-
-        // Tab switching functionality
         function switchTab(tabName) {
-            // Hide all tabs
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
-
-            // Remove active class from all buttons
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Show selected tab
             const selectedTab = document.getElementById(tabName);
             if (selectedTab) {
                 selectedTab.classList.add('active');
             }
-
-            // Add active class to clicked button
             event.target.closest('.tab-btn').classList.add('active');
         }
-
-        // Initialize language to German on page load
         document.addEventListener('DOMContentLoaded', function() {
-            switchLanguage('de');
+            switchLanguage('en');
         });
     </script>
 </body>
